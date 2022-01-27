@@ -1,7 +1,7 @@
 # docsTest
 Testing a documentation site
 
-This is a quick prototype of a docs site. You're currently located on the front page of `https://johncschuster.github.io/docsTest/`. The content is served using [GitHub Pages](https://pages.github.com/) and the front-end is [GatsbyJS](https://www.gatsbyjs.com/)
+This is a quick prototype of a site using [GitHub Pages](https://pages.github.com/) and [GatsbyJS](https://www.gatsbyjs.com/) to demonstrate image embeds in a page. You're currently located on the front page of `https://johncschuster.github.io/docsTest/`.
 
 The repo itself for the content can be found here: 
 [`https://github.com/johncschuster/docsTest`](https://github.com/johncschuster/docsTest)
