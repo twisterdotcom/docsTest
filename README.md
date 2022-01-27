@@ -17,7 +17,7 @@ For example, the headshot below is stored in the folder `/assets/images/`.
 
 ![filePathDemo](/assets/images/filePath.png)
 
-That makes the relative path of the file `/assets/images/2017_John_Schuster.jpg`. Using `![alt text for image](/assets/images/2017_John_Schuster.jpg)` we can embed the image right in the article like so!
+That makes the relative path of the file `/assets/images/2017_John_Schuster.jpg`. Using `![alt text for image](/assets/images/2017_John_Schuster.jpg)` we can embed the image right in the article like so! ⬇️
 
 
 ![/assets/images/2017_John_Schuster.jpg](/assets/images/2017_John_Schuster.jpg)
