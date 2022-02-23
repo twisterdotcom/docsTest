@@ -1,24 +1,4 @@
-# docsTest
-Testing a documentation site
-
-This is a quick prototype of a site using [GitHub Pages](https://pages.github.com/) and [GatsbyJS](https://www.gatsbyjs.com/) to demonstrate image embeds in a page. You're currently located on the front page of `https://johncschuster.github.io/docsTest/`.
-
-The repo itself for the content can be found here: 
-[`https://github.com/johncschuster/docsTest`](https://github.com/johncschuster/docsTest)
+Hello! This is a completely vanilla demo of help docs. You're on the index page, which is currently linked to a single article that's all about New Expensify! Nested within that article will be three more articles. Take a look!
 
 
-### How are you storing and serving images like that sweet headshot below?
-
-Well, dear reader, I'm glad you asked.
-
-Images can be stored in the repo itself, and we can embed them in these articles using their relative paths; very handy for the inevitable move to NewDot.
-
-For example, the headshot below is stored in the folder `/assets/images/`. 
-
-![filePathDemo](/assets/images/filePath.png)
-
-That makes the relative path of the file `/assets/images/2017_John_Schuster.jpg`. Using `![alt text for image](/assets/images/filename.jpg)` we can embed the image right in the article like so! ⬇️
-
-
-![/assets/images/2017_John_Schuster.jpg](/assets/images/2017_John_Schuster.jpg)
-
+[All about New Expensify!](page)
