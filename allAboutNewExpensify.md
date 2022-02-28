@@ -1,6 +1,6 @@
 # What is new.expensify.com? 
 
-[image](image)
+![image](/assets/images/expensify-app-icon.png)
 
 ### A brand NEW app for Summer 2021! 
 
