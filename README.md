@@ -2,3 +2,15 @@ Hello! This is a completely vanilla demo of help docs. You're on the index page,
 
 
 [All about New Expensify!](https://johncschuster.github.io/docsTest/allAboutNewExpensify)
+
+
+
+<details>
+  <summary>Click to expand!</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
