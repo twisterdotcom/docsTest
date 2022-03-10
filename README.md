@@ -4,6 +4,7 @@ Hello! This is a completely vanilla demo of help docs. You're on the index page,
 [All about New Expensify!](https://johncschuster.github.io/docsTest/allAboutNewExpensify)
 
 
+(Below is a test to show collapsible content – I'm still trying to figure out why the MD contained within won't render right)
 
 <details>
   <summary>Click to expand!</summary>
