@@ -15,3 +15,8 @@ Hello! This is a completely vanilla demo of help docs. You're on the index page,
      * With some
      * Sub bullets
 </details>
+
+
+Testing a heading anchor below:
+
+[create an anchor](#anchors-in-markdown)
