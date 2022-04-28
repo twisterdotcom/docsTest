@@ -19,4 +19,8 @@ Hello! This is a completely vanilla demo of help docs. You're on the index page,
 
 Testing a heading anchor below:
 
-[create an anchor](#anchors-in-markdown)
+[This is an anchor that will jump down to the heading, "Anchors in Markdown"](#anchors-in-markdown)
+
+# Anchors in Markdown
+
+test test test
