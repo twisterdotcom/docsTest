@@ -1,49 +1,35 @@
 name: Concierge Customer Escalation
-about: Used by SecondResponders to create an escalated issue for Concierge Management Review
-labels:
-  - Concierge
-  - Daily
-  - Task
+description: Used by SecondResponders to create an escalated issue for Concierge Management Review
+labels: |
+  Concierge
+  Daily
+  Task
 title: '[customer domain][brief explanation of issue]'
 
-research_checklist:
-  - item: Concierge Chat
-    link: [link]
-    completed: false
-  - item: Customer affected
-    link: [customer email]
-    completed: false
-  - item: Searched GitHub for customer email in existing issues
-    link: [if an OPEN duplicate exists, please add to that issue and do not continue creating this one. If a CLOSED issue exists, continue creating this issue and paste that link here]
-    completed: false
-  - item: Searched GitHub for issue customer is experiencing
-    link: [if an OPEN duplicate exists, please add to that issue and do not continue creating this one. If a CLOSED issue exists, continue creating this issue and paste that link here]
-    completed: false
-  - item: Admin email
-    link: [any relevant domain or policy admin emails]
-    completed: false
-  - item: Policy IDs
-    link: [all affected policy IDs]
-    completed: false
-  - item: Report IDs
-    link: [all affected report IDs]
-    completed: false
-  - item: Searched ZingTree
-    link: [insert node link here]
-    completed: false
-  - item: Supportaled into customers account and took relevant screenshots
-    link: [Include where relevant in the write up below]
-    completed: false
-  - item: Searched Slack for customer domain and email address
-    link: [insert any links here]
-    completed: false
-  - item: Searched Slack for issue customer is experiencing
-    link: [insert any links here]
-    completed: false
-  - item: Tried to reproduce in a test account
-    link: [If no, why not]
-    completed: false
+body: |
+  # Research Checklist ✔️
 
-customer_action: ''
-what_happens: ''
-additional_notes: ''
+  ⚠️ Note - **all these steps** need to be completed before submitting a new issue to help our Concierge and Engineering teams investigate this further. Check out this [SO](https://stackoverflow.com/c/expensify/questions/14187) for research tips ⚠️
+  To check off a an item put an x in the parenthesis - `[x]`
+
+  - [ ] **Concierge Chat**: [link] 
+  - [ ] **Customer affected**: [customer email]
+  - [ ] **Searched GitHub for customer email in existing issues:** [if an OPEN duplicate exists, please add to that issue and do not continue creating this one. If a CLOSED issue exists, continue creating this issue and paste that link here]
+  - [ ] **Searched GitHub for issue customer is experiencing:** [if an OPEN duplicate exists, please add to that issue and do not continue creating this one. If a CLOSED issue exists, continue creating this issue and paste that link here]
+  - [ ] **Admin email:** [any relevant domain or policy admin emails]
+  - [ ] **Policy IDs:** [all affected policy IDs]
+  - [ ] **Report IDs:** [all affected report IDs]
+  - [ ] **Searched ZingTree:** [insert node link here] 
+  - [ ] **Supportaled into customers account and took relevant screenshots** [Include where relevant in the write up below]
+  - [ ] **Searched Slack for customer domain and email address:** [insert any links here]
+  - [ ] **Searched Slack for issue customer is experiencing:** [insert any links here]
+  - [ ] **Tried to reproduce in a test account** [If no, why not] 
+
+  ## What is the customer trying to do?
+  Explain in a few sentences what the exact action the customer is trying to achieve  
+
+  ## What is happening when they try do it? 
+  Explain in a few sentences what happens when the customer tries to achieve that action. Do they see an error message? Are there any screenshots of this? Why is this a problem?
+
+  ## Additional Notes 
+  Any extra context that will be helpful to the team investigating this
