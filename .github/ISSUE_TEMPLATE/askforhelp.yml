@@ -64,7 +64,7 @@ body:
     id: actualOutcome
     attributes:
       label: What is the actual outcome?
-      description: Explain in a few sentences what happens when the customer tries to achieve that action.
+      description: "Explain in a few sentences what happens when the customer tries to achieve that action."
       placeholder: "Every time they try, the receive the error: "ExpensiError NS0056, Error creating employee: You do not have permissions to set a value for element entityid""
     validations:
       required: true
