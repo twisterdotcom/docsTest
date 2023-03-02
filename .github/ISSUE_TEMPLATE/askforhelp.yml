@@ -60,7 +60,14 @@ body:
       placeholder: When the connection is set to create employees upon export, or when an employee is correctly setup with a matching email address on the NetSuite employee record, the report should export without errors.
     validations:
       required: true
-
+  - type: textarea
+    id: actualOutcome
+    attributes:
+      label: "What is the actual outcome?"
+      description: "Explain in a few sentences what happens when the customer tries to achieve that action."
+      placeholder: "Every time they try, the receive the error: ExpensiError NS0056, Error creating employee: You do not have permissions to set a value for element entityid"
+    validations:
+		required: true
   - type: textarea
     id: errorMessage
     attributes:
@@ -144,7 +151,6 @@ body:
       options:
         - label: I tried reproducing in a test account
           required: true
-
   - type: checkboxes
     id: preSubmitCheck
     attributes:
@@ -160,7 +166,7 @@ body:
     id: otherDescription
     attributes:
       label: Other
-      description: Why you created this GH issue (other)
+      description: "Why you created this GH issue (other)"
     validations:
       required: false
   - type: checkboxes
@@ -169,8 +175,8 @@ body:
       label: Is this GitHub sufficient?
       description: "Please review the [StackOverflow](https://stackoverflowteams.com/c/expensify/questions/15675) on our best practices and confirm your GitHub meets the following expectations:"
       options:
-       - label: **Information in the GitHub** - All necessary/relevant information is included in the GH. The reviewer (Concierge Team member) does not need to reference the chat to gather additional information to resolve the customer issue.
-       - label: **Outlining the problem** - You have outlined the problem and provided all of the relevant information to solve it. You answered all of the questions under "Outline the Problem." 
-       - label: **Evidence of research** - You linked all relevant resources, Slack convos, GHs, StackOverflows, ZingTree Nodes, and Community articles, but based on the complexity of the customer issue, the GH still needed to be created.
-       - label: **Completing the conversation before/after asking for help** - You've answered all of the customer's questions (not related to the customer issue outlined in the GH) 
+       - label: "**Information in the GitHub** - All necessary/relevant information is included in the GH. The reviewer (Concierge Team member) does not need to reference the chat to gather additional information to resolve the customer issue."
+       - label: "**Outlining the problem** - You have outlined the problem and provided all of the relevant information to solve it. You answered all of the questions under "Outline the Problem." 
+       - label: "**Evidence of research** - You linked all relevant resources, Slack convos, GHs, StackOverflows, ZingTree Nodes, and Community articles, but based on the complexity of the customer issue, the GH still needed to be created."
+       - label: "**Completing the conversation before/after asking for help** - You've answered all of the customer's questions (not related to the customer issue outlined in the GH)"
        required: true
