@@ -1,6 +1,6 @@
 name: Ask for help
 description: Ask an Concierge team member for help
-title: "[Ask for Help]: Summary of customer issue "
+title: "[Ask for Help]: Summary of customer issue"
 labels:
   - concierge
   - daily
