@@ -130,7 +130,7 @@ body:
   - type: textarea
     id: otherLinks
     attributes:
-      label: Other: Slack, Google, ExpensifyHelp/Community
+      label: "Other: Slack, Google, ExpensifyHelp/Community"
       description: Post any relevant resources that you found on our external support platforms, Slack links or discussions etc
       placeholder: "https://github.com/Expensify/Expensify/issues/265091"
     validations:
