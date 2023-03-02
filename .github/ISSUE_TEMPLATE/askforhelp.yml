@@ -158,13 +158,9 @@ body:
       description: You may select more than one.
       options:
        - label: "You could not find the resolution in Expensify's resources"
-       required: true
        - label: You do not have access to the tool needed to complete this action
-       required: true
        - label: The customer issue is a bug report
-       required: true
        - label: Other (please describe below)
-       required: true
   - type: textarea
     id: otherDescription
     attributes:
@@ -182,4 +178,3 @@ body:
        - label: "**Outlining the problem** - You have outlined the problem and provided all of the relevant information to solve it. You answered all of the questions under "Outline the Problem." 
        - label: "**Evidence of research** - You linked all relevant resources, Slack convos, GHs, StackOverflows, ZingTree Nodes, and Community articles, but based on the complexity of the customer issue, the GH still needed to be created."
        - label: "**Completing the conversation before/after asking for help** - You've answered all of the customer's questions (not related to the customer issue outlined in the GH)"
-       required: true
