@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         "## Customer Details"
-        *Note*: All requested information must be completed before submitting the GH issue for review.
+        "*Note*: All requested information must be completed before submitting the GH issue for review."
   - type: input
     id: email
     attributes:
@@ -21,7 +21,7 @@ body:
     attributes:
       label: Concierge Chat
       description: The URL of the chat you're asking for help on
-      placeholder: https://www.expensify.com/concierge/#/chat/12345678
+      placeholder: "https://www.expensify.com/concierge/#/chat/12345678"
     validations:
       required: true
   - type: textarea
@@ -65,7 +65,7 @@ body:
     attributes:
       label: What is the actual outcome?
       description: Explain in a few sentences what happens when the customer tries to achieve that action.
-      placeholder: Every time they try, the receive the error: "ExpensiError NS0056, Error creating employee: You do not have permissions to set a value for element entityid"
+      placeholder: "Every time they try, the receive the error: "ExpensiError NS0056, Error creating employee: You do not have permissions to set a value for element entityid""
     validations:
       required: true
   - type: textarea
@@ -124,7 +124,7 @@ body:
     attributes:
       label: ZingTree
       description: Insert the node-link here.
-      placeholder: https://zingtree.com/host.php?tree_id=113537224&start_node=150
+      placeholder: "https://zingtree.com/host.php?tree_id=113537224&start_node=150"
     validations:
       required: false
   - type: input
@@ -132,7 +132,7 @@ body:
     attributes:
       label: StackOverflow
       description: Post any relevant Stack Overflow links here.
-      placeholder: https://stackoverflowteams.com/c/expensify/questions/10574
+      placeholder: "https://stackoverflowteams.com/c/expensify/questions/10574"
     validations:
       required: false
   - type: textarea
@@ -140,7 +140,7 @@ body:
     attributes:
       label: Other: Slack, Google, ExpensifyHelp/Community
       description: Post any relevant resources that you found on our external support platforms, Slack links or discussions etc
-      placeholder: https://github.com/Expensify/Expensify/issues/265091
+      placeholder: "https://github.com/Expensify/Expensify/issues/265091"
     validations:
       required: false
   - type: checkboxes
@@ -184,10 +184,10 @@ body:
     validations:
       required: false
   - type: checkboxes
-    id: sufficientChecl
+    id: sufficientCheck
     attributes:
       label: Is this GitHub sufficient?
-      description: Please review the [StackOverflow](https://stackoverflowteams.com/c/expensify/questions/15675) on our best practices and confirm your GitHub meets the following expectations:
+      description: "Please review the [StackOverflow](https://stackoverflowteams.com/c/expensify/questions/15675) on our best practices and confirm your GitHub meets the following expectations:"
       options:
        - label: **Information in the GitHub** - All necessary/relevant information is included in the GH. The reviewer (Concierge Team member) does not need to reference the chat to gather additional information to resolve the customer issue.
        - label: **Outlining the problem** - You have outlined the problem and provided all of the relevant information to solve it. You answered all of the questions under "Outline the Problem." 
