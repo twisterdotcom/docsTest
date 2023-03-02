@@ -150,7 +150,6 @@ body:
       label: Reproduction steps
       description: "How do you trigger this bug? Please walk us through it step by step."
       value: |
-      "Test account:"
       1.
       2.
       3.
