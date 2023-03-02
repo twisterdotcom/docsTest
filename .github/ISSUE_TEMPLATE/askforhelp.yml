@@ -173,7 +173,6 @@ body:
         test account
       options:
         - label: I tried reproducing in a test account
-          required: true
   - type: checkboxes
     id: preSubmitCheck
     attributes:
@@ -184,7 +183,6 @@ body:
         - label: You do not have access to the tool needed to complete this action
         - label: The customer issue is a bug report
         - label: Other (please describe below)
-      required: true
   - type: textarea
     id: otherDescription
     attributes:
@@ -215,4 +213,3 @@ body:
         - label: "**Completing the conversation before/after asking for help** - You've
             answered all of the customer's questions (not related to the
             customer issue outlined in the GH)"
-      required: true
