@@ -7,12 +7,12 @@ labels:
   - daily
   - task
 body:
-  - type: markdown
-    attributes:
-      value: >
-        "## Customer Details"
-
-        "*Note*: All requested information must be completed before submitting the GH issue for review."
+- type: markdown
+  attributes:
+    value: "## Customer Details"
+- type: markdown
+  attributes:
+    value: "*Note*: All requested information must be completed before submitting the GH issue for review."
   - type: input
     id: email
     attributes:
@@ -123,13 +123,13 @@ body:
         this report contains both.
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: >
-        "## Research"
-
-        Please link to the relevant issues/resources you reviewed while researching the customer issue.     
-  - type: textarea
+- type: markdown
+  attributes:
+    value: "## Research"
+- type: markdown
+  attributes:
+    value: "Please link to the relevant issues/resources you reviewed while researching the customer issue."
+- type: textarea
     id: githubCustomer
     attributes:
       label: Customer GitHub Issues
