@@ -167,14 +167,15 @@ body:
       placeholder: https://github.com/Expensify/Expensify/issues/265091
     validations:
       required: false
-  - type: checkboxes
+  - type: dropdown
     id: tested
     attributes:
       label: I tried reproducing in a test account
-      description: Check this box to confirm you attempted recreating the issue in a
-        test account
       options:
-        - label: I tried reproducing in a test account
+        - "Yes"
+        - "No - I have explained why below"
+     validations:
+      required: true
   - type: dropdown
     id: preSubmitCheck
     attributes:
@@ -184,14 +185,14 @@ body:
         - You could not find the resolution in Expensify's resources
         - You do not have access to the tool needed to complete this action
         - The customer issue is a bug report
-        - Other (please describe below)
+        - "Other - I have explained why below"
     validations:
       required: true
   - type: textarea
     id: otherDescription
     attributes:
-      label: Other
-      description: Why you created this GH issue (other)
+      label: Explanation
+      description: "If you selected "No" or "Other" for the previous dropdowns, add the explanation here."
     validations:
       required: false
   - type: checkboxes
