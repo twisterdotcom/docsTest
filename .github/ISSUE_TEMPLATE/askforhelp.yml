@@ -174,7 +174,7 @@ body:
       options:
         - "Yes"
         - "No - I have explained why below"
-    validations: null
+    validations:
       required: true
   - type: dropdown
     id: preSubmitCheck
