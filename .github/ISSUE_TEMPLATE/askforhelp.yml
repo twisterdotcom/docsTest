@@ -128,9 +128,9 @@ body:
     attributes:
       value: "## Research"
   - type: markdown
-    attributes: 
-      value: "Please link to the relevant issues/resources you reviewed
-      while researching the customer issue."
+    attributes:
+      value: Please link to the relevant issues/resources you reviewed while
+        researching the customer issue.
   - type: textarea
     id: githubCustomer
     attributes:
@@ -172,9 +172,9 @@ body:
     attributes:
       label: I tried reproducing in a test account
       options:
-        - "Yes"
-        - "No - I have explained why below"
-     validations:
+        - Yes
+        - No - I have explained why below
+      validations: null
       required: true
   - type: dropdown
     id: preSubmitCheck
@@ -185,14 +185,15 @@ body:
         - You could not find the resolution in Expensify's resources
         - You do not have access to the tool needed to complete this action
         - The customer issue is a bug report
-        - "Other - I have explained why below"
+        - Other - I have explained why below
     validations:
       required: true
   - type: textarea
     id: otherDescription
     attributes:
       label: Explanation
-      description: "If you selected "No" or "Other" for the previous dropdowns, add the explanation here."
+      description: If you selected `No` or `Other` for the previous dropdowns, add the
+        explanation here
     validations:
       required: false
   - type: checkboxes
@@ -204,21 +205,21 @@ body:
         675) on our best practices and confirm your GitHub meets the following
         expectations:"
       options:
-        - label: "Information in the GitHub - All necessary/relevant information is
+        - label: Information in the GitHub - All necessary/relevant information is
             included in the GH. The reviewer (Concierge Team member) does not
             need to reference the chat to gather additional information to
-            resolve the customer issue."
+            resolve the customer issue.
           required: true
-        - label: "Outlining the problem - You have outlined the problem and provided
-            all of the relevant information to solve it. You answered all of the
-            questions under 'Outline the Problem.'"
+        - label: Outlining the problem - You have outlined the problem and provided all of
+            the relevant information to solve it. You answered all of the
+            questions under 'Outline the Problem.'
           required: true
-        - label: "Evidence of research - You linked all relevant resources, Slack
-            convos, GHs, StackOverflows, ZingTree Nodes, and Community articles,
-            but based on the complexity of the customer issue, the GH still
-            needed to be created."
+        - label: Evidence of research - You linked all relevant resources, Slack convos,
+            GHs, StackOverflows, ZingTree Nodes, and Community articles, but
+            based on the complexity of the customer issue, the GH still needed
+            to be created.
           required: true
-        - label: "Completing the conversation before/after asking for help - You've
+        - label: Completing the conversation before/after asking for help - You've
             answered all of the customer's questions (not related to the
-            customer issue outlined in the GH)"
+            customer issue outlined in the GH)
           required: true
