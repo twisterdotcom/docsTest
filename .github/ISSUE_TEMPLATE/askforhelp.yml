@@ -157,7 +157,7 @@ body:
       label: Confirm why you created this GH issue
       description: You may select more than one.
       options:
-       - label: You could not find the resolution in Expensify's resources
+       - label: "You could not find the resolution in Expensify's resources"
        - label: You do not have access to the tool needed to complete this action
        - label: The customer issue is a bug report
        - label: Other (please describe below)
