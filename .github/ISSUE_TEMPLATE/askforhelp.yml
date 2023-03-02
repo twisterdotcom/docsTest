@@ -172,9 +172,9 @@ body:
     attributes:
       label: I tried reproducing in a test account
       options:
-        - Yes
-        - No - I have explained why below
-      validations: null
+        - "Yes"
+        - "No - I have explained why below"
+    validations: null
       required: true
   - type: dropdown
     id: preSubmitCheck
