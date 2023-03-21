@@ -1,0 +1,50 @@
+---
+name: Managed Domain Reassignment
+description: Have the Concierge Team reassign a managed customer
+title: "[Customer Reassignment]: domain.com"
+labels:
+  - concierge
+  - daily
+  - task
+body:
+  - type: markdown
+    attributes:
+      value: "## Customer Details"
+  - type: markdown
+    attributes:
+      value: "*Note*: All requested information must be completed before submitting
+        the GH issue for review."
+  - type: input
+    id: domain
+    attributes:
+      label: Domain of assigned customer
+      description: The domain of the assigned customer
+      placeholder: ex. hogwarts.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: Concierge Chat
+      description: The URL of the chat if it exists
+      placeholder: https://www.expensify.com/concierge/#/chat/12345678
+    validations:
+      required: false
+  - type: dropdown
+    id: reasonForReassignment
+    attributes:
+      label: Reason for Reassignment
+      description: Why does this domain need to be reassigned from you?
+      options:
+        - Primary contact(s) timezone incompatible
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: detailsForReassignment
+    attributes:
+      label: Outline the details
+      description: List here any circumstances of extra information we might need to handle this request
+      placeholder: Most users from hogwarts.com can't make calls during my business hours. I have a good relationship with Minerva though as we have bonded over our love of cats.
+    validations:
+      required: true
