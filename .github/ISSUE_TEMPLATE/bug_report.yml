@@ -1,0 +1,144 @@
+---
+name: Customer Bug Report
+description: Report a bug
+title: "[Bug Report]: Summary of a bug"
+labels:
+  - bug
+  - daily
+  - improvement
+body:
+  - type: markdown
+    attributes:
+      value: "## Action Performed:"
+  - type: markdown
+    attributes:
+      value: "*Note*: All requested information must be completed before submitting
+        the GH issue for review."
+  - type: textarea
+    id: actionPerformed
+    attributes:
+      label: What actions were taken to discover the bug?
+      description: Explain the steps taken until the bug was discovered.
+      placeholder: "Please break down in numbered steps all the steps you or the customer took until you or the customer discovered the bug."
+    validations:
+      required: true
+  - type: textarea
+    id: expectedResult
+    attributes:
+      label: Expected Result.
+      description: Describe what you think should've happened
+      placeholder: "Please describe the expected result that should happen after the described steps were taken"
+    validations:
+      required: true
+  - type: textarea
+    id: actualResult
+    attributes:
+      label: Actual Result.
+      description: Describe what actually happened
+      placeholder: "Please describe the actual result after the described steps were taken"
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: "Can the user still use Expensify without this being fixed? Have you informed them of the workaround?"
+      placeholder: "Is there a workaround that the user can use in order for him to be able to bypass this bug? If yes, have you informed the user about the workaround?"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Where is this issue occurring - web or mobile?
+      options:
+        - Web Chrome
+        - Web Firefox
+        - Web Edge
+        - Web Safari
+        - Mobile Android
+        - Mobile iOS
+    validations:
+      required: true
+  - type: input
+    id: versionNumber
+    attributes:
+      label: Version Number
+      description: For Cash and Mobile issues only.
+      placeholder: V 1.25
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: If applicable, include a link to a [relevant
+        LogSearch](https://stackoverflowteams.com/c/expensify/questions/4856)
+        here.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: notesPhotosVideos
+    attributes:
+      label: Notes Photos and Videos
+      description: If applicable, include any additional info.
+      placeholder: Please include any additional notes, photos or videos if its the case.
+    validations:
+      required: false
+  - type: dropdown
+    id: stagingOrProduction
+    attributes:
+      label: Staging or Production
+      description: Is this issue reproducible in staging, production, both or none?
+      options: 
+        - Production
+        - Staging
+        - Both
+        - None of them
+    validations:
+        required: true
+  - type: markdown
+    attributes:
+      value: "## Internal only, do not post to External repos"
+  - type: input
+    id: email
+    attributes:
+      label: Customer Affected
+      description: The affected user's primary email address
+      placeholder: ex. myemail@gmail.com
+    validations:
+      required: false
+  - type: input
+    id: adminEmail
+    attributes:
+      label: Admin email
+      description: Any relevant domain or policy admin emails
+      placeholder: ex. myemail@gmail.com
+    validations:
+      required: false
+  - type: input
+    id: chatLink
+    attributes:
+      label: Concierge Chat
+      description: The URL of the chat where the bug was reported
+      placeholder: https://www.expensify.com/concierge/#/chat/12345678
+    validations:
+      required: false
+  - type: textarea
+    id: policyIDs
+    attributes:
+      label: Affected Policy IDs
+      description: List policies that are affected
+      placeholder: B6013AA349A14280, 11FB084582FBA666
+    validations:
+      required: false
+  - type: textarea
+    id: reportIDs
+    attributes:
+      label: Affected Report IDs
+      description: List reports that are affected
+      placeholder: R006SYJiYFVh, R00ITXLlejHg
+    validations:
+      required: false
+  
