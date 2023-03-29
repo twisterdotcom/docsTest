@@ -3,9 +3,9 @@ name: Ask for help
 description: Ask an Concierge team member for help
 title: "[Ask for Help]: Summary of customer issue"
 labels:
-  - concierge
-  - daily
-  - task
+  - Concierge
+  - Daily
+  - Task
 body:
   - type: markdown
     attributes:
