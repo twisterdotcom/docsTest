@@ -1,0 +1,81 @@
+---
+name: Incorrect SmartScan Receipt by Agent
+description: Used to report incorrect data input by SmartScan Agents.
+title: "Incorrect SmartScan Receipt by Agent"
+labels:
+  - parser
+  - bug
+  - high
+body:
+  - type: markdown
+    attributes:
+      value: "### NOTE: This template is NOT for receipts that were parsed. To verify whether the receipt was parsed <br/> or SmartScanned by Agent please follow this [SO](https://stackoverflow.com/c/expensify/questions/990)"
+  - type: markdown
+    attributes:
+      value: "### What data field was input incorrectly? What should it have been? 
+       
+      
+<br/>"
+  - type: markdown
+    attributes:
+      value: "To locate the receipt URL follow the process below:"
+  - type: markdown
+    attributes:
+      value: "1. Go to https://www.expensify.com/_support/expensiworks/ssdos/receiptAuditor.php"
+  - type: markdown
+    attributes:
+      value: "2. Right-click the image of the receipt on the right, copy the link address "
+  - type: markdown
+    attributes:
+      value: "3. Keep the SS Auditor open to grab its URL for the last bullet point
+      <br/>
+      
+      
+<br/>"
+  - type: input
+    id: email
+    attributes:
+      label: "Please add the affected User Email Address:" 
+      description: The affected user's email address.
+      placeholder: ex. useremail@company.com
+    validations:
+      required: true
+  - type: input
+    id: ReceiptID
+    attributes:
+      label: "Receipt ID"
+      description: Please add the Receipt ID.
+      placeholder: ex. 606947805
+    validations:
+      required: true
+  - type: input
+    id: ReceiptURL
+    attributes:
+      label: "Receipt URL"
+      description: Please add the Receipt URL.
+      placeholder: ex. expensify.com/receipts/w_6f84a7035fb5f9536ca5a1134824a1415c4afbc0.jpg
+    validations:
+      required: true
+  - type: input
+    id: smartScanDosReceiptUrl
+    attributes:
+      label: "SmartScan Dos Receipt Auditor URL"
+      description: Please add the SmartScan Dos Receipt Auditor URL.
+      placeholder: https://www.expensify.com/_support/expensiworks/ssdos/receiptAuditor?receiptID=606947805
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "
+      <br/>
+  
+  
+      
+ <br/> Assignee, there are two SOs to follow to
+      complete this GH assignment"
+  - type: markdown
+    attributes:
+      value: "Verifying the incorrect receipt and notifying the agent: https://stackoverflow.com/c/expensify/questions/8589"
+  - type: markdown
+    attributes:
+      value: "Creating the Rejection in the agent account: https://stackoverflow.com/c/expensify/questions/8587"
