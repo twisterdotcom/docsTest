@@ -1,0 +1,71 @@
+---
+name: Account Manager Onboarding
+description: This is a checklist for Onboarding a SecondResponder (SR) as an Account Manager (AM) when nesting is complete
+title: "Account Manager Onboarding Checklist"
+labels:
+  - concierge
+  - daily
+  - task
+body:
+  - type: input
+    id: email
+    attributes:
+      label: SRAM Email(s)
+      description: The AMs email addresses. Please separate each email with a comma and a space. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: true
+  - type: checkboxes
+    id: sufficientCheck
+    attributes:
+      label: Are they a Team Lead or Agent?
+      description: "Please check the checkbox that applies"
+      options:
+        - label: Team Lead.
+          required: true
+        - label: Agent.
+          required: true
+  - type: input
+    id: timezone
+    attributes:
+      label: 'SRAM Timezone and shift:'
+      description: Please input the Team Lead/Agent timezone. 
+      placeholder: GMT+2, 7:00 AM to 4:00 PM, Monday to Friday
+    validations:
+      required: true
+  - type: checkboxes
+    id: sufficientCheck1
+    attributes:
+      label: 'Coach Tasks:'
+      description: 'These must be done by the Coach that gets this GH assign first'
+      options:
+        - label: 'Request that the SR be added as a member to "#sr-account-managers" Slack workspace, by clicking on "Expensify" (top left in Slack) > "Invite People To Expensify."'
+          required: true
+        - label: Assign customers to SRAM
+          required: true
+        - label: Assign a Coach Mentor to the SRAM using [these instructions](https://stackoverflowteams.com/c/expensify/questions/15287/15288#15288)
+          required: true
+        - label: Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks
+          required: true
+  - type: checkboxes
+    id: sufficientCheck2
+    attributes:
+      label: 'Coach Mentor Tasks:'
+      description: 'These must be done by the Coach that wil have the Team Lead/Agent as a Mentee'
+      options:
+        - label: 'Review this [SO](https://stackoverflow.com/c/expensify/questions/14477) on mentoring best practices'
+          required: true
+        - label: 'Share this set of Account Managers [SOs](https://stackoverflowteams.com/c/expensify/posts/tagged/882) with SRAM and ask them to review them'
+          required: true
+        - label: 'Reach out directly to your mentee in Slack (via DM) to introduce yourself'
+          required: true
+        - label: Ask your mentee to enter their GH handle (without the @) in Concierge (Concierge > Settings > [GitHub Details](https://www.expensify.com/concierge/#/settings/gitHubDetails) > Save)
+          required: true
+        - label: Add them to the [#account-management](https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM) channel in Slack
+          required: true
+        - label:  Confirm they have users assigned to them in Concierge
+          required: true
+        - label: Book an initial sync with them to introduce yourself
+          required: true
+
+
