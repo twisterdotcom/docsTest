@@ -1,0 +1,40 @@
+---
+name: Account Manager Offboarding
+description: This is a checklist for Offboarding a SecondResponder (SR) as an Account Manager (AM)
+title: "Account Manager Offboarding Checklist"
+labels:
+  - daily
+  - task
+body:
+  - type: input
+    id: email
+    attributes:
+      label: Email
+      description: The affected AMs email addresses. Please separate each email with a comma and a space. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "## Offboarding"
+  - type: checkboxes
+    id: sufficientCheck
+    attributes:
+      label: "Infra Tasks:"
+      description: "Please make sure to follow each step and check each checkbox."
+      options:
+        - label: Remove the SR from the [SR Account Managers](https://github.com/orgs/Expensify/teams/sr-account-managers/members) team in the Expensify/Expensify repo.
+          required: true
+        - label: Remove the SR from the "#sr-account-managers" Slack workspace.
+          required: true
+  - type: checkboxes
+    id: sufficientCheck1
+    attributes:
+      label: "Coach Tasks:"
+      description: "Please make sure to follow each step and check each checkbox."
+      options:
+        - label: Remove the SR from the "accountManager" beta in Supportal.
+          required: true
+        - label: Post in the "#vip_managed1000" Slack channel and await further instructions on unassigning the SR's Admins/customers.
+          required: true
+
