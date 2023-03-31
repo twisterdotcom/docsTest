@@ -146,7 +146,7 @@ body:
   - type: checkboxes
     id: isSufficient
     attributes:
-      label: "## Is this GitHub sufficient?"
+      label: "'## Is this GitHub sufficient?'"
       description: "Please review the [StackOverflow](https://stackoverflowteams.com/c/expensify/questions/15675) on <br/> our best practices and confirm your GitHub meets the following expectations:"
       options:
         - label: "**Information in the GitHub** - All necessary/relevant information is included in the GH. The reviewer <br/> (Concierge Team member) does not need to reference the chat to gather additional information to resolve the customer issue."
