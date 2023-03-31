@@ -1,0 +1,160 @@
+---
+name: Domain Migration
+description: Used for when a Domain Admin wants to migrate their Domain.
+title: "[Domain Migration]: Data for a Domain Migration"
+labels:
+  - Concierge
+  - Daily
+  - Task
+body:
+  - type: markdown
+    attributes:
+      value: "## Customer Details"
+  - type: markdown
+    attributes:
+      value: "*Note*: All requested information must be completed before submittin the GH issue for review."
+  - type: input
+    id: email
+    attributes:
+      label: Affected Primary Email Address.
+      description: The affected user's primary email address
+      placeholder: ex. example@domain.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: Concierge Chat.
+      description: The URL of the chat you're asking for help on
+      placeholder: https://www.expensify.com/concierge/#/chat/12345678
+    validations:
+      required: true
+  - type: input
+    id: oldDomain
+    attributes:
+      label: Nameof the old domain.
+      description: What is the name of the old domain?
+      placeholder: ex. olddomain.com
+    validations:
+      required: true
+  - type: input
+    id: newDomain
+    attributes:
+      label: Name of the new domain.
+      description: What is the name of the new domain?
+      placeholder: ex. newdomain.com
+    validations:
+      required: true
+  - type: checkboxes
+    id: hasAccountManager
+    attributes:
+      label: Does the domain have an Account Manager?
+      description: "Does the domain have an Account Manager? Please select the proper option from the dropdown below"
+      options:
+        - label: "Yes. I have assigned the same AM to the new domain here: https://www.expensify.com/concierge/#/tools/UserAssignment."
+          required: true
+        - label: "No."
+          required: true
+  - type: checkboxes
+    id: emailAddressesActive
+    attributes:
+      label: Are the email addresses active?
+      description: Are the email addresses active? Please check the box that applies.
+      options:
+        - label: "Yes."
+          required: true
+        - label: "No."
+          required: true
+  - type: checkboxes
+    id: associatedWithExpensifyAccount
+    attributes:
+      label: Are the new emails associated with an Expensify account yet?
+      description: Are the new emails associated with an Expensify account yet? Please check the box that applies.
+      options:
+        - label: "Yes."
+          required: true
+        - label: "No."
+          required: true
+  - type: checkboxes
+    id: emailAddresssMap
+    attributes:
+      label: Do the new email addresses map 1:1 with the old email address?
+      description: Do the new email addresses map 1:1 with the old email address? Please check the box that applies.
+      options:
+        - label: "Yes."
+          required: true
+        - label: "No."
+          required: true
+  - type: checkboxes
+    id: allEmployeesEmailChanging
+    attributes:
+      label: Are all employee email addresses changing?
+      description: Are all employee email addresses changing? Please check the box that applies.
+      options:
+        - label: "Yes"
+          required: true
+        - label: "No."
+          required: true
+  - type: checkboxes
+    id: isTheDomainVerified
+    attributes:
+      label: Is the Domain verified?
+      description: Please confirm if either of the domains is verified in Expensify (you can do this by clicking in to the domain and then <br/> on Domain Members. If the option to "Verify" the domain is available, that means the domain isn't verified).
+      options:
+        - label: "Yes, the old domain is verified."
+          required: true
+        - label: "Yes, the new domain is verified."
+          required: true
+        - label: "No, neither of the domains is verified, but I've instructed the user to verify the new domain."
+          required: true
+        - label: "Both domains are verified, but I've instructed the user to reset the old domain."
+          required: true
+  - type: checkboxes
+    id: expansifyCardEnabled
+    attributes:
+      label: Does the old domain have Expensify Cards enabled?
+      description: Does the old domain have Expensify Cards enabled?? Please check the box that applies.
+      options:
+        - label: "Yes"
+          required: true
+        - label: "No"
+          required: true
+  - type: input
+    id: switchDate
+    attributes:
+      label: When does the customer want to make the switch?
+      description: If you have a speciffic date, please add the date in the "January 1, 2023". format <br/> If you have an interval, you can add something in the lines of "Next week".
+      placeholder: ex. No.1 "January 1, 2023" - ex. No.2 "Next week"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "**Finally, check to see if the old domain reroutes to the NEW domain** (you can <br/> do this by entering the web address of the old domain in the search bar of your internet browser)<br/>
+      
+      
+<br/>"
+  - type: checkboxes
+    id: noRedirect
+    attributes:
+      label: Does the old domain redirect to the new domain?
+      description: If it doesn't redirect, we’ll need proof of a connection to the new domain, such as a receipt of purchase from the domain host.
+      options:
+        - label: "The old domain does redirect to the new domain."
+          required: true
+        - label: "The old domain does not redirect to the new domain, but I've asked the customer to forward me the receipt confirming their domain purchase."
+          required: true
+  - type: checkboxes
+    id: isSufficient
+    attributes:
+      label: "## Is this GitHub sufficient?"
+      description: "Please review the [StackOverflow](https://stackoverflowteams.com/c/expensify/questions/15675) on <br/> our best practices and confirm your GitHub meets the following expectations:"
+      options:
+        - label: "**Information in the GitHub** - All necessary/relevant information is included in the GH. The reviewer <br/> (Concierge Team member) does not need to reference the chat to gather additional information to resolve the customer issue."
+          required: true
+        - label: '**Outlining the problem** - You have outlined the problem and provided all of the relevant information to <br/> solve it. You answered all of the questions under "Outline the Problem."'
+          required: true
+        - label: "**Evidence of research** - You linked all relevant resources, Slack convos, GHs, StackOverflows, ZingTree Nodes, and Community articles, but based on the complexity of the customer issue, the GH still needed to be created."
+          required: true
+        - label: "**Completing the conversation before/after asking for help** - You've answered all of the customer's questions (not related to the customer issue outlined in the GH)"
+          required: true
+   
