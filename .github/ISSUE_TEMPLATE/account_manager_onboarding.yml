@@ -19,7 +19,7 @@ body:
     id: teamLeadOrAgent
     attributes:
       label: Are they a Team Lead or Agent?
-      description: "Please check the option that applies"
+      description: "Please select the option that applies"
       options:
         - 
         - Agent
