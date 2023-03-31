@@ -36,6 +36,7 @@ body:
       label: Reason for Reassignment
       description: Why does this domain need to be reassigned from you?
       options:
+        - 
         - Primary contact(s) timezone incompatible
         - Other
     validations:
