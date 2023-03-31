@@ -25,6 +25,16 @@ body:
         - Team Lead
     validations:
       required: true
+  - type: radio
+    id: teamLeadOrAgent1
+    attributes:
+      label: Are they a Team Lead or Agent?
+      description: "Please check the option that applies"
+      options:
+        - Agent
+        - Team Lead
+    validations:
+      required: true
   - type: input
     id: timezone
     attributes:
