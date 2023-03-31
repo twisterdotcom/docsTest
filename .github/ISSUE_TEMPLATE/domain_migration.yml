@@ -52,9 +52,9 @@ body:
       description: "Does the domain have an Account Manager? Please select the proper option from the dropdown below"
       options:
         - label: "Yes. I have assigned the same AM to the new domain here: https://www.expensify.com/concierge/#/tools/UserAssignment."
-          required: true
+          required: false
         - label: "No."
-          required: true
+          required: false
   - type: checkboxes
     id: emailAddressesActive
     attributes:
@@ -62,9 +62,9 @@ body:
       description: Are the email addresses active? Please check the box that applies.
       options:
         - label: "Yes."
-          required: true
+          required: false
         - label: "No."
-          required: true
+          required: false
   - type: checkboxes
     id: associatedWithExpensifyAccount
     attributes:
@@ -72,9 +72,9 @@ body:
       description: Are the new emails associated with an Expensify account yet? Please check the box that applies.
       options:
         - label: "Yes."
-          required: true
+          required: false
         - label: "No."
-          required: true
+          required: false
   - type: checkboxes
     id: emailAddresssMap
     attributes:
@@ -82,9 +82,9 @@ body:
       description: Do the new email addresses map 1:1 with the old email address? Please check the box that applies.
       options:
         - label: "Yes."
-          required: true
+          required: false
         - label: "No."
-          required: true
+          required: false
   - type: checkboxes
     id: allEmployeesEmailChanging
     attributes:
@@ -92,9 +92,9 @@ body:
       description: Are all employee email addresses changing? Please check the box that applies.
       options:
         - label: "Yes"
-          required: true
+          required: false
         - label: "No."
-          required: true
+          required: false
   - type: checkboxes
     id: isTheDomainVerified
     attributes:
@@ -102,13 +102,13 @@ body:
       description: Please confirm if either of the domains is verified in Expensify (you can do this by clicking in to the domain and then <br/> on Domain Members. If the option to "Verify" the domain is available, that means the domain isn't verified).
       options:
         - label: "Yes, the old domain is verified."
-          required: true
+          required: false
         - label: "Yes, the new domain is verified."
-          required: true
+          required: false
         - label: "No, neither of the domains is verified, but I've instructed the user to verify the new domain."
-          required: true
+          required: false
         - label: "Both domains are verified, but I've instructed the user to reset the old domain."
-          required: true
+          required: false
   - type: checkboxes
     id: expansifyCardEnabled
     attributes:
@@ -116,9 +116,9 @@ body:
       description: Does the old domain have Expensify Cards enabled?? Please check the box that applies.
       options:
         - label: "Yes"
-          required: true
+          required: false
         - label: "No"
-          required: true
+          required: false
   - type: input
     id: switchDate
     attributes:
@@ -140,9 +140,9 @@ body:
       description: If it doesn't redirect, we’ll need proof of a connection to the new domain, such as a receipt of purchase from the domain host.
       options:
         - label: "The old domain does redirect to the new domain."
-          required: true
+          required: false
         - label: "The old domain does not redirect to the new domain, but I've asked the customer to forward me the receipt confirming their domain purchase."
-          required: true
+          required: false
   - type: checkboxes
     id: isSufficient
     attributes:
