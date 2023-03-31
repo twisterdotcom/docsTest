@@ -144,7 +144,7 @@ body:
           required: false
   - type: markdown
     attributes:
-      value: "## Customer Details"
+      value: "## Before submitting this issue for review"
   - type: checkboxes
     id: isSufficient
     attributes:
