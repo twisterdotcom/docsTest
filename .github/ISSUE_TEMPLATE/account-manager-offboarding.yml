@@ -6,12 +6,12 @@ labels:
   - daily
   - task
 body:
-  - type: input
+  - type: textarea
     id: email
     attributes:
-      label: Email
-      description: The affected AMs email addresses. Please separate each email with a comma and a space. 
-      placeholder: ex. myemail@team.expensify.com
+      label: SRAM(s) Email(s)
+      description: The SRAM(s) email address(es). If there are more than one, please bulletpoint each email address.
+      placeholder: example@domain.com
     validations:
       required: true
   - type: markdown
