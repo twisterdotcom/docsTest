@@ -131,7 +131,6 @@ body:
     attributes:
       value: "**Finally, check to see if the old domain reroutes to the NEW domain** (you can <br/> do this by entering the web address of the old domain in the search bar of your internet browser)<br/>
       
-      
 <br/>"
   - type: checkboxes
     id: noRedirect
@@ -146,7 +145,7 @@ body:
   - type: checkboxes
     id: isSufficient
     attributes:
-      label: 
+      label: "## Is this GitHub sufficient?"
       description: "Please review the [StackOverflow](https://stackoverflowteams.com/c/expensify/questions/15675) on <br/> our best practices and confirm your GitHub meets the following expectations:"
       options:
         - label: "**Information in the GitHub** - All necessary/relevant information is included in the GH. The reviewer <br/> (Concierge Team member) does not need to reference the chat to gather additional information to resolve the customer issue."
