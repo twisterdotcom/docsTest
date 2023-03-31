@@ -24,6 +24,7 @@ body:
       label: Are they a Team Lead or Agent?
       description: "Please check the option that applies"
       options:
+        - 
         - Agent
         - Team Lead
     validations:
