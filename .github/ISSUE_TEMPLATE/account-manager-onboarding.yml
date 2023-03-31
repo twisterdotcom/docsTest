@@ -25,16 +25,13 @@ body:
         - Team Lead
     validations:
       required: true
-  - type: radio
-    id: teamLeadOrAgent1
-    attributes:
-      label: Are they a Team Lead or Agent?
-      description: "Please check the option that applies"
-      options:
-        - Agent
-        - Team Lead
-    validations:
-      required: true
+  <p>How old are you?</p>
+<input type="radio" id="child" name="age" value="child">
+<label for="child">17 years or younger</label><br>
+<input type="radio" id="adult" name="age" value="adult">
+<label for="adult">18 - 64 years</label><br>
+<input type="radio" id="senior" name="age" value="senior">
+<label for="senior">65 years or older</label>
   - type: input
     id: timezone
     attributes:
