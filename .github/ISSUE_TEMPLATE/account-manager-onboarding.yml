@@ -12,10 +12,10 @@ body:
     attributes:
       label: SRAM(s) Email(s)
       description: The SRAM(s) email address(es). Please bulletpoint each email address.
-      placeholder: "sram1email@example.com"
+      placeholder: sram1email@example.com
       <br/> 
       <br/>
-      placeholder: "sram2@example.com"
+      sram2@example.com"
     validations:
       required: true
   - type: dropdown
