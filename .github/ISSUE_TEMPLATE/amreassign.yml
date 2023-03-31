@@ -34,7 +34,7 @@ body:
     id: reasonForReassignment
     attributes:
       label: Reason for Reassignment
-      description: Why does this domain need to be reassigned from you?
+      description: Please choose a reason from the below dropdown.
       options:
         - 
         - Primary contact(s) timezone incompatible
