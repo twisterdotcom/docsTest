@@ -142,6 +142,9 @@ body:
           required: false
         - label: "The old domain does not redirect to the new domain, but I've asked the customer to forward me the receipt confirming their domain purchase."
           required: false
+  - type: markdown
+    attributes:
+      value: "## Customer Details"
   - type: checkboxes
     id: isSufficient
     attributes:
