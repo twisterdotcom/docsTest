@@ -1,0 +1,136 @@
+name: Expensify Card Dispute
+description: This is an Expensify card dispute template
+title: "Expensify Card Dispute"
+labels:
+  - concierge
+  - daily
+  - task
+body:
+  - type: input
+    id: email
+    attributes:
+      label: "Affected Primary Email Address:"
+      description: Please add the affected user's email address. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: "Chat Link:"
+      description: "Please add the chat link:"
+      placeholder: https://www.expensify.com/concierge/#/chat/12341237
+    validations:
+      required: true
+  - type: checkboxes
+    id: disputeReason
+    attributes:
+      label: Dispute Reason (select one)
+      description: "Please select a reason for this dispute"
+      options:
+        - label: Fraud - The user's physical card or card number was stolen to make fraudulent charges.
+          required: false
+        - label: Service Dispute - The cardholder claims to have never received the goods, or the goods were materially different from their expectations.
+          required: false
+        - label: Processing Error - The user is reporting duplicate billing, incorrect amount billed or a refund which was promised but never received.
+          required: false
+        - label: Other (please describe below).
+  - type: textarea
+    id: disputeReasons
+    attributes:
+      label: Dispute Reason
+      description: Please add the dispute reason(s).
+      placeholder: "ex. The user does not recognize the $1 charge"
+    validations:
+      required: false
+  - type: checkboxes
+    id: moreDisputeReason
+    attributes:
+      label: Is the dispute a Service Dispute or Processing Error?
+      description: "If the dispute is a Service Dispute or Processing Error, have you informed the customer we will need proof/documentation that they've attempted to resolve this with the merchant?"
+      options:
+        - label: Yes, I've attached those details to this issue
+          required: false
+        - label: No, but I sent the customer a message letting them know we'll need that information
+          required: false
+        - label: N/A - this is fraudulent
+          required: false
+  - type: input
+    id: lastFourDigits
+    attributes:
+      label: Last 4 digits of their card.
+      description: "Please add the last 4 digits of their card:"
+      placeholder: ex. 1234
+    validations:
+      required: true
+  - type: input
+    id: fullName
+    attributes:
+      label: "Card holder's full name:"
+      description: Please add the card holder's full name as shown on their Expensify card.
+      placeholder: ex. Will Smith
+    validations:
+      required: true
+  - type: checkboxes
+    id: cardLocation
+    attributes:
+      label: "Card Location (select one):"
+      description: What is the current location of the card?
+      options:
+        - label: Lost
+          required: false
+        - label: Stolen
+          required: false
+        - label: In the user's possession
+          required: false
+  - type: checkboxes
+    id: isTheCardCanceled
+    attributes:
+      label: "If the card is lost/stolen, has it been canceled?"
+      description: Did the user canceled their card?
+      options:
+        - label: Yes, the card is canceled
+          required: false
+        - label: No, but I messaged the customer telling them to cancel it
+          required: false
+  - type: input
+    id: transactionLocation
+    attributes:
+      label: "Transaction(s) located on Report ID:"
+      description: Please add the Report ID where the transaction/s is/are. 
+      placeholder: ex. 6349226329505250
+    validations:
+      required: false
+  - type: textarea
+    id: merchantDateAmount
+    attributes:
+      label: "Transaction Details (Please list merchant/ date /amount):"
+      description: Please add the the merchant, date and amount of the transaction
+      placeholder: "ex. Kfc, 12 March 2023, $20"
+    validations:
+      required: false
+  - type: input
+    id: whenWasTheTransactionMade
+    attributes:
+      label: "How many days ago was the transaction made:"
+      description: Please add the number of days since the transaction was made and today.
+      placeholder: ex. 6 days
+    validations:
+      required: false
+  - type: input
+    id: transactionPending
+    attributes:
+      label: "Is the transaction pending?"
+      description: Please share if the transaction is pending or not. 
+      placeholder: ex. Yes
+    validations:
+      required: false
+  - type: input
+    id: disputeUntilSettle
+    attributes:
+      label: "If the transaction is still pending, did you let the customer know that we cannot dispute it until it settles:"
+      description: Please share if you let the customer know the above.. 
+      placeholder: ex. Yes
+    validations:
+      required: false
+      
