@@ -1,0 +1,97 @@
+name: Subscription change/refund/credit
+description: Use this template for requesting changes to a subscription, granting a credit or requesting a refund over $50.
+title: "Please change subscription / grant credit / request refund for"
+labels:
+  - concierge
+  - task
+  - weekly
+body:
+  - type: input
+    id: email
+    attributes:
+      label: "Affected Primary Email Address:"
+      description: Please add the affected user's email address. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: "Chat Link:"
+      description: "Please add the chat link:"
+      placeholder: https://www.expensify.com/concierge/#/chat/12341237
+    validations:
+      required: true
+  - type: textarea
+    id: lastMessage
+    attributes:
+      label: Last Message From The User
+      description: "Please add the user's last message"
+      placeholder: "ex. Refund me my last Expensify monthly bill because I have been double charged!"
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Why is this user wanting a change to their subscription / requesting a refund or credit? 
+_(Requesting a subscription change? You can show when their subscription ended with a screenshot of their receipt [like this](https://user-images.githubusercontent.com/9133401/117822992-e8f86a00-b264-11eb-8a99-b0fbc11c333b.png))_"
+      placeholder: "ex. Refund me my last Expensify monthly bill!"
+    validations:
+      required: false
+  - type: input
+    id: forRefundsCredits
+    attributes:
+      label: "For Refunds/Credits:"
+      description: Do they qualify for a Refund or Credits? 
+      placeholder: "ex. Credits"
+    validations:
+      required: false
+  - type: input
+    id: expensifyOrUserError
+    attributes:
+      label: "Expensify's error or User Error:"
+      description: "Is this due to an error on our side or an error on the user's side?"
+      placeholder: "ex. On the user's side"
+    validations:
+      required: false
+  - type: input
+    id: amountPerMonth
+    attributes:
+      label: "Amount per month:"
+      description: What is the amount that they pay per month?" 
+      placeholder: "ex. $50"
+    validations:
+      required: false
+  - type: input
+    id: totalAmount
+    attributes:
+      label: "Total amount:"
+      description: What is the total amount of the "Credit/Refund"
+      placeholder: "ex. $50"
+    validations:
+      required: false
+  - type: input
+    id: cardHolderFullName
+    attributes:
+      label: "Cardholder first and last name:"
+      description: "Please add the cardholder's first and last name:"
+      placeholder: "ex. Brian Adams"
+    validations:
+      required: false
+  - type: input
+    id: last4Digits
+    attributes:
+      label: "Last 4 digits of their card"
+      description: "Please add the last 4 digits of the user's card." 
+      placeholder: ex. 1234
+    validations:
+      required: false
+  - type: input
+    id: billingOwherEmail
+    attributes:
+      label: "Billing owner email address:"
+      description: Please add the Billing Owner's email address:. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: false
