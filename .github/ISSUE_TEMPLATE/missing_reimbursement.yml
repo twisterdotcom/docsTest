@@ -1,0 +1,103 @@
+name: Missing Reimbursement
+description: Allows agents to request reimbursements for users
+title: "Missing Reimbursement"
+labels:
+  - concierge
+  - daily
+  - task
+body:
+  - type: input
+    id: email
+    attributes:
+      label: "Affected Primary Email Address:"
+      description: Please add the affected user's email address. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: "Chat Link:"
+      description: "Please add the chat link:"
+      placeholder: https://www.expensify.com/concierge/#/chat/12341237
+    validations:
+      required: true
+  - type: input
+    id: reportID
+    attributes:
+      label: "Report ID"
+      description: "Please add the Report ID:"
+      placeholder: "ex. 5444352511317418"
+    validations:
+      required: false
+  - type: input
+    id: reimbursementID
+    attributes:
+      label: "Reimbursement ID"
+      description: "Please add the Reimbursement ID:"
+      placeholder: "ex. 18684098"
+    validations:
+      required: false
+  - type: input
+    id: reimbursementAmount
+    attributes:
+      label: "Reimbursement Amount"
+      description: "Please add the reimbursement amount:"
+      placeholder: "ex. $1,616.40"
+    validations:
+      required: false
+  - type: input
+    id: reimbursementDate
+    attributes:
+      label: "Date when the reimbursement was initiated"
+      description: "Please add the date when the reimbursement was initiated:"
+      placeholder: "ex. 1st of January, 2023"
+    validations:
+      required: false
+  - type: input
+    id: reimbursementExpectedDate
+    attributes:
+      label: "Date when the reimbursement was expected"
+      description: "Please add the date when the reimbursement was expected:"
+      placeholder: "ex. 2nd of January, 2023"
+    validations:
+      required: false
+  - type: input
+    id: last4Digitss
+    attributes:
+      label: "Last 4-digits of the deposit account"
+      description: "Please add the last 4-digits of the deposit account:"
+      placeholder: "ex. 4567"
+    validations:
+      required: false
+  - type: checkboxes
+    id: successfyllyReceivedReimbursements
+    attributes:
+      label: Has the submitter of the report received reimbursements to the connected deposit account successfully in the past?
+      description: "Tip: Click into historic expense reports, and see if the [Report Comments](https://community.expensify.com/discussion/5752/how-to-use-the-comments-section-of-a-report) mentions ACH reimbursement being delivered to the same bank account)"
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+  - type: checkboxes
+    id: describeScenario
+    attributes:
+      label: "Reason that best describes the scenario:"
+      description: "Please select a reason that best describe the scenario"
+      options:
+        - label: The recipient connected a deposit account that was closed.
+          required: false
+        - label: The recipient entered the bank details incorrectly when connecting their deposit account
+          required: false
+        - label: The recipient entered the correct bank details, but the reimbursement is still missing.
+          required: false
+        - label: Something else (please describe below) 
+  - type: textarea
+    id: otherReason
+    attributes:
+      label: Other reason(s)
+      description: "Please add any other reason(s) why the user is missing this reimbursement:"
+      placeholder: "ex. The bank went bankrupt"
+    validations:
+      required: false
