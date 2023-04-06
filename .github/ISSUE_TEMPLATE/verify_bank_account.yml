@@ -1,0 +1,58 @@
+name: Business Bank Account Verification
+description: Used to allow agents to verify business bank accounts that did not pass automatically.
+title: "Business Bank Account Verification"
+labels:
+  - concierge
+  - daily
+  - task
+body:
+  - type: input
+    id: email
+    attributes:
+      label: "Affected Primary Email Address:"
+      description: Please add the affected user's email address. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: "Chat Link:"
+      description: "Please add the chat link:"
+      placeholder: https://www.expensify.com/concierge/#/chat/12341237
+    validations:
+      required: true
+  - type: checkboxes
+    id: documentsRequired
+    attributes:
+      label: "Documents we requested and the ones that did not pass auto-verification. Check the boxes that apply:"
+      description: "Tip: You can find this information in the automated message Concierge sent to the user"
+      options:
+        - label: "Tax/Employer Identification Number (TIN/EIN) - Requested documents to verify their company's TIN/EIN"
+          required: false
+        - label: "Company Address - Requested documents to verify their company address"
+          required: false
+        - label: "Account Ownership - Requested a verification letter from SVB or a 3-way bank verification call"
+          required: false
+        - label: "Controlling Officer ID - Requested documents to verify the identity of the user connecting the bank account"
+          required: false
+        - label: "Beneficial Owner ID - Requested documents to verify the identity of the Beneficial Owner"
+          required: false
+  - type: checkboxes
+    id: userSentAllDocuments
+    attributes:
+      label: "Did the user send us all of the documents that were requested in the automated message?"
+      description: "Please check the checkbbox that applies"
+      options:
+        - label: "Yes - I confirmed that the customer provided all the requested documents"
+          required: false
+        - label: "No - But I sent a message to the customer and requested the document(s) once more before I made this GH."
+          required: false
+  - type: textarea
+    id: attacheDocuments
+    attributes:
+      label: "Download & attach the documents the customer provided below:"
+      description: Please attach all the documents the user sent us.
+      placeholder: "ex. Tin.csv"
+    validations:
+      required: false
