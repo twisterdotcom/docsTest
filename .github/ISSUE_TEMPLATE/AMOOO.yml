@@ -1,0 +1,67 @@
+name: Account Manager Out Of Office
+description: Use this to prepare for being out of the office for more than a regular day.
+title: OOO - (Agent email) {yyyy-mm-dd to yyyy-mm-dd}
+labels:
+  - task
+  - weekly
+body:
+  - type: input
+    id: firstDayOut
+    attributes:
+      label: "First Day Out:"
+      description: Please add the first day of leave. 
+      placeholder: ex. 2023-10-30
+    validations:
+      required: false
+  - type: input
+    id: firstDayIn
+    attributes:
+      label: 'First Day Back In Office:'
+      description: "Please add the first day when you are back in office:"
+      placeholder: ex. 2023-11-15
+    validations:
+      required: false
+  - type: checkboxes
+    id: inAdvance
+    attributes:
+      label: In Advance
+      description: "Please take the below actions in advance of your leave:"
+      options:
+        - label: If you have admins you are chatting with regularly, or longer-term projects that you are working on with them, let them know that you’ll be taking leave soon, and when. Let them know that while you are away, you will “pause” the assignment, so they will go to the general support queue (unless you have a specific Managed Buddy).
+          required: false
+        - label: Let your AM Mentor know when you’ll be away (and if you have paired them with a new mentor or not)
+          required: false
+        - label: Assign this GH to yourself and your mentor.
+          required: false
+  - type: checkboxes
+    id: onFinalDay
+    attributes:
+      label: On Your Final Day Before Leave
+      description: "Please take these actions on your final day before leave:"
+      options:
+        - label: "Edit your name in New Expensify, so that your surname contains your status. E.g. Firstname: Jimbo Lastname: Jones - OOO until 3 March (please message Concierge)"
+          required: false
+        - label: Go to the [Concierge User Assignment tool](https://www.expensify.com/concierge/#/tools/UserAssignment) and [Pause your assignments](https://stackoverflowteams.com/c/expensify/questions/14568).
+          required: false
+        - label: If any of your customers need to be looked after while you’re OoO, let your mentor know and reassign those users to them in Concierge.
+          required: false
+        - label: Close any GHs assigned to you, that can be finalized.
+          required: false
+        - label: Change your Slack status to reflect your OOO and set a realistic return time.
+          required: false
+  - type: checkboxes
+    id: whenYouReturn
+    attributes:
+      label: When You Return From Leave
+      description: "Please take these actions first day when you return from leave:"
+      options:
+        - label: Edit your name in New Expensify back to normal.
+          required: false
+        - label: Change your slack status (if it didn’t happen automatically).
+          required: false
+        - label: Turn off any email auto-responder.
+          required: false
+        - label: Unpause your assignments.
+          required: false
+        - label: Reassign any VIPs that were temporarily reassigned.
+          required: false
