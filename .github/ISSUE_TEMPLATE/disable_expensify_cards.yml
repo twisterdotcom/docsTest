@@ -1,0 +1,77 @@
+name: Disable Expensify Cards
+description: This is a template for disabling the Expensify card for a Domain
+title: "Disable Expensify Cards"
+labels:
+  - concierge
+  - daily
+  - expensify card
+  - task
+body:
+  - type: input
+    id: email
+    attributes:
+      label: "Affected Primary Email Address:"
+      description: Please add the affected user's email address. 
+      placeholder: ex. myemail@team.expensify.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: "Chat Link:"
+      description: "Please add the chat link:"
+      placeholder: https://www.expensify.com/concierge/#/chat/12341237
+    validations:
+      required: true
+  - type: input
+    id: domain
+    attributes:
+      label: "Domain Name:"
+      description: "Please list the Domain that is requesting to remove the Expensify card:"
+      placeholder: artcraft.com
+    validations:
+      required: true
+  - type: checkboxes
+    id: areSmartLimitsSetToZero
+    attributes:
+      label: Are all the card [Smart Limits](https://community.expensify.com/discussion/4851/deep-dive-what-are-smart-limits) set to $0.00?
+      description: "Please check the checkbox that applies"
+      options:
+        - label: Yes - I checked and confirmed they are all set to $0.00.
+          required: false
+        - label: No - But I sent a message to the admin requesting they set the Smart Limits to $0.00.
+          required: false
+  - type: checkboxes
+    id: pendingExpensifyCardTransactions
+    attributes:
+      label: Are there any pending Expensify Card transactions?
+      description: "Please check the checkbox that applies"
+      options:
+        - label: "Yes."
+          required: false
+        - label: "No."
+          required: false
+  - type: checkboxes
+    id: disputeReason
+    attributes:
+      label: Select Scenario
+      description: "Please select which option best describes the scenario:"
+      options:
+        - label: The business bank account needed for the Expensify Cards was provisioned on the incorrect domain.
+          required: false
+        - label: The company/account holder wants to close their account.
+          required: false
+        - label: A domain admin is trying to reset their verified domain with Expensify Cards to close their account/company’s use of Expensify.
+          required: false
+        - label: The user is threatening legal action if we do not disable the Expensify Cards.
+          required: false
+        - label: Something else (please describe below)
+          required: false
+  - type: textarea
+    id: otherReasons
+    attributes:
+      label: Other Reasons
+      description: Please add any other reason(s).
+      placeholder: "ex. They never enabled the Expensify card"
+    validations:
+      required: false
