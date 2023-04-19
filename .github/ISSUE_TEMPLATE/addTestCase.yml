@@ -31,7 +31,7 @@ body:
       label: Outline the details
       description: List here any circumstances of extra information we might need to
         handle this request
-      placeholder: Add a new Currency test case to Workspace and Add Bank account > Workspace Settings > General settings for Currency:
+      placeholder: Add a new Currency test case to Workspace and Add Bank account > Workspace Settings > General settings for Currency
         - Connect a bank account to the workspace (if you don't have one
           already) (As in Add Bank Account tests).
         - Go to Workspace Settings > General Settings > Currency
