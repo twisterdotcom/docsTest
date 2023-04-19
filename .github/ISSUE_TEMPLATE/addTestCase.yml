@@ -32,11 +32,10 @@ body:
       description: List here any circumstances of extra information we might need to
         handle this request
       placeholder: |
-      1. Add a new Currency test case to Workspace and Add Bank account > Workspace Settings > General settings for Currency
-      1. Connect a bank account to the workspace (if you don't have one already) (As in Add Bank Account tests).
-      2. Go to Workspace Settings > General Settings > Currency
-      3. Verify that the default currency can't be edited and help text states why - 'The default currency can't be changed because this workspace is linked
-          to a USD bank account.'
+      1. In this environment...
+      2. With this config...
+      3. Run '...'
+      4. See error...
     validations:
       required: true
   - type: input
