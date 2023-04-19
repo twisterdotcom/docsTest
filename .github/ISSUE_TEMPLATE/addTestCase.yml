@@ -4,7 +4,7 @@ description: Add or amend a test case in Test Rail
 title: "Update Test Rail case from App #"
 labels: ["Daily"]
 assignees:
--applausebot
+- applausebot
 body:
   - type: input
     id: appIssue
