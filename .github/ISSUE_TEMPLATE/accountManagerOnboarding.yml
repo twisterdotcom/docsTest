@@ -1,0 +1,45 @@
+name: Account Manager Onboarding
+description: This is a checklist for Onboarding a SecondResponder (SR) as an Account Manager (AM) when nesting is complete
+title: "[SRAM NAME] is done nesting on [DATE] - Please assign customers and mentor"
+labels:
+  - Concierge
+  - Daily
+  - Task
+body:
+  - type: input
+    id: email
+    attributes:
+      label: SRAM email(s)
+      description: If adding multiple, paste them as a comma separated list.
+      placeholder: ex. hermione@hogwarts.com,harry@hogwarts.com
+    validations:
+      required: true
+  - type: dropdown
+    id: teamLeadOrNot
+    attributes:
+      label: Team Lead or Agent
+      description: Select whether the above SRAM's are Team Leads or Agents (if both, create multiple issues)
+      options:
+        - Team Lead
+        - Agent
+    validations:
+      required: true
+- type: textarea
+    id: timezoneAndShift
+    attributes:
+      label: SRAM Timezone and Shift
+      description: Details the timezone and shift pattern the SRAM(s) will work
+      placeholder: hermione@hogwarts.com - UTC+1:00 - 9:00-18:00, harry@howarts.com - UTC+6:00 - 8:00-16:00
+    validations:
+      required: true
+ - type: checkboxes
+    id: coachTasks
+    attributes:
+      label: Coach Tasks
+      description: Tasks to be completed by the Concierge assignee
+      options:
+        - label: Request that the SR be added as a member to "#sr-account-managers" Slack workspace, by clicking on "Expensify" (top left in Slack) > "Invite People To Expensify."
+        - label: Assign customers to SRAM
+        - label: Assign a Coach Mentor to the SRAM using [these instructions](https://stackoverflowteams.com/c/expensify/questions/15287/15288#15288)
+        - label: Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks 
+          required: true 
