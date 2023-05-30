@@ -42,7 +42,7 @@ body:
           required: true
         - label: 'Assign customers to SRAM'
           required: true
-        - label: 'Assign a Coach Mentor to the SRAM using [these instructions](https://stackoverflowteams.com/c/expensify/questions/15287/15288#15288)'
+        - label: 'Assign a Coach Mentor to the SRAM using these instructions: https://stackoverflowteams.com/c/expensify/questions/15287'
           required: true
         - label: 'Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks'
           required: true
