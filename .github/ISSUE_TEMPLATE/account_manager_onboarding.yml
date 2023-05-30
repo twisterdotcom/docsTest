@@ -58,7 +58,7 @@ body:
           required: true
         - label: 'Reach out directly to your mentee in Slack (via DM) to introduce yourself'
           required: true
-        - label: Ask your mentee to enter their GH handle (without the @) in Concierge (Concierge > Settings > GitHub Details: https://www.expensify.com/concierge/#/settings/gitHubDetails > Save)
+        - label: 'Ask your mentee to enter their GH handle (without the @) in Concierge (Concierge > Settings > GitHub Details: https://www.expensify.com/concierge/#/settings/gitHubDetails > Save)'
           required: true
         - label: Add them to the #account-management channel in Slack: https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM
           required: true
@@ -66,5 +66,3 @@ body:
           required: true
         - label: Book an initial sync with them to introduce yourself
           required: true
-
-
