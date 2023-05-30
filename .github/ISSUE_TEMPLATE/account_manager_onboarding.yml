@@ -40,7 +40,7 @@ body:
       options:
         - label: 'Request that the SR be added as a member to "#sr-account-managers" Slack workspace, by clicking on "Expensify" (top left in Slack) > "Invite People To Expensify."'
           required: true
-        - label: 'Assign customers to SRAM'
+        - label: 'Update the Custom Field 2 in the relevant firstresponders@expensify.com owned "secondResponder" policy to reflect their working hours and maximum assignments (eg: "UTC+1:00;300")'
           required: true
         - label: 'Assign a Coach Mentor to the SRAM using these instructions: https://stackoverflowteams.com/c/expensify/questions/15287'
           required: true
@@ -65,4 +65,6 @@ body:
         - label:  'Confirm they have users assigned to them in Concierge'
           required: true
         - label: 'Book an initial sync with them to introduce yourself'
+          required: true
+        - label: 'Set up Google Calendar for appointment booking by following these steps: https://stackoverflowteams.com/c/expensify/questions/15512/'
           required: true
