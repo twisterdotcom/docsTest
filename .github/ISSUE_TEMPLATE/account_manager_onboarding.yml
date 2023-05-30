@@ -24,12 +24,12 @@ body:
         - Team Lead
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: timezone
     attributes:
       label: 'SRAM Timezone and shift:'
       description: Details the timezone and shift pattern the SRAM(s) will work
-      placeholder: hermione@hogwarts.com - UTC+1:00 - 9:00-18:00, harry@howarts.com - UTC+6:00 - 8:00-16:00
+      placeholder: 'hermione@hogwarts.com - UTC+1:00 - 9:00-18:00, harry@howarts.com - UTC+6:00 - 8:00-16:00'
     validations:
       required: true
   - type: checkboxes
@@ -40,11 +40,11 @@ body:
       options:
         - label: 'Request that the SR be added as a member to "#sr-account-managers" Slack workspace, by clicking on "Expensify" (top left in Slack) > "Invite People To Expensify."'
           required: true
-        - label: Assign customers to SRAM
+        - label: 'Assign customers to SRAM'
           required: true
-        - label: Assign a Coach Mentor to the SRAM using [these instructions](https://stackoverflowteams.com/c/expensify/questions/15287/15288#15288)
+        - label: 'Assign a Coach Mentor to the SRAM using [these instructions](https://stackoverflowteams.com/c/expensify/questions/15287/15288#15288)'
           required: true
-        - label: Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks
+        - label: 'Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks'
           required: true
   - type: checkboxes
     id: mentorTasks
