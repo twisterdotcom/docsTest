@@ -11,7 +11,7 @@ body:
     attributes:
       label: SRAM(s) Email(s)
       description: The SRAM(s) email address(es). If there are more than one, please bulletpoint each email address.
-      placeholder: - hermione@hogwarts.com, - harry@hogwarts.com
+      placeholder: hermione@hogwarts.com, harry@hogwarts.com
     validations:
       required: true
   - type: dropdown
