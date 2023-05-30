@@ -11,7 +11,7 @@ body:
     attributes:
       label: SRAM(s) Email(s)
       description: The SRAM(s) email address(es). If there are more than one, please bulletpoint each email address.
-      placeholder: hermione@hogwarts.com, harry@hogwarts.com
+      placeholder: '- hermione@hogwarts.com, - harry@hogwarts.com'
     validations:
       required: true
   - type: dropdown
@@ -60,9 +60,9 @@ body:
           required: true
         - label: 'Ask your mentee to enter their GH handle (without the @) in Concierge (Concierge > Settings > GitHub Details: https://www.expensify.com/concierge/#/settings/gitHubDetails > Save)'
           required: true
-        - label: Add them to the #account-management channel in Slack: https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM
+        - label: 'Add them to the #account-management channel in Slack: https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM'
           required: true
-        - label:  Confirm they have users assigned to them in Concierge
+        - label:  'Confirm they have users assigned to them in Concierge'
           required: true
-        - label: Book an initial sync with them to introduce yourself
+        - label: 'Book an initial sync with them to introduce yourself'
           required: true
