@@ -11,16 +11,15 @@ body:
     attributes:
       label: SRAM(s) Email(s)
       description: The SRAM(s) email address(es). If there are more than one, please bulletpoint each email address.
-      placeholder: example@domain.com
+      placeholder: - hermione@hogwarts.com, - harry@hogwarts.com
     validations:
       required: true
   - type: dropdown
     id: teamLeadOrAgent
     attributes:
       label: Are they a Team Lead or Agent?
-      description: "Please select the option that applies"
+      description: Select whether the above SRAM's are Team Leads or Agents (if both, create multiple issues)
       options:
-        - 
         - Agent
         - Team Lead
     validations:
@@ -29,12 +28,12 @@ body:
     id: timezone
     attributes:
       label: 'SRAM Timezone and shift:'
-      description: Please input the Team Lead/Agent timezone. 
-      placeholder: GMT+2, 7:00 AM to 4:00 PM, Monday to Friday
+      description: Details the timezone and shift pattern the SRAM(s) will work
+      placeholder: hermione@hogwarts.com - UTC+1:00 - 9:00-18:00, harry@howarts.com - UTC+6:00 - 8:00-16:00
     validations:
       required: true
   - type: checkboxes
-    id: sufficientCheck1
+    id: conciergeTasks
     attributes:
       label: 'Coach Tasks:'
       description: 'These must be done by the Coach that gets this GH assign first'
@@ -48,20 +47,20 @@ body:
         - label: Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks
           required: true
   - type: checkboxes
-    id: sufficientCheck2
+    id: mentorTasks
     attributes:
       label: 'Coach Mentor Tasks:'
       description: 'These must be done by the Coach that wil have the Team Lead/Agent as a Mentee'
       options:
-        - label: 'Review this [SO](https://stackoverflow.com/c/expensify/questions/14477) on mentoring best practices'
+        - label: 'Review this SO on mentoring best practices: https://stackoverflow.com/c/expensify/questions/14477'
           required: true
-        - label: 'Share this set of Account Managers [SOs](https://stackoverflowteams.com/c/expensify/posts/tagged/882) with SRAM and ask them to review them'
+        - label: 'Share this set of Account Managers SOs with SRAM and ask them to review them: https://stackoverflowteams.com/c/expensify/posts/tagged/882'
           required: true
         - label: 'Reach out directly to your mentee in Slack (via DM) to introduce yourself'
           required: true
-        - label: Ask your mentee to enter their GH handle (without the @) in Concierge (Concierge > Settings > [GitHub Details](https://www.expensify.com/concierge/#/settings/gitHubDetails) > Save)
+        - label: Ask your mentee to enter their GH handle (without the @) in Concierge (Concierge > Settings > GitHub Details: https://www.expensify.com/concierge/#/settings/gitHubDetails > Save)
           required: true
-        - label: Add them to the [#account-management](https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM) channel in Slack
+        - label: Add them to the #account-management channel in Slack: https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM
           required: true
         - label:  Confirm they have users assigned to them in Concierge
           required: true
