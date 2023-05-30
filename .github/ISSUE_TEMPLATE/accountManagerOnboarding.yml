@@ -39,7 +39,22 @@ body:
       description: Tasks to be completed by the Concierge assignee
       options:
         - label: Request that the SR be added as a member to "#sr-account-managers" Slack workspace, by clicking on "Expensify" (top left in Slack) > "Invite People To Expensify."
-        - label: Assign customers to SRAM
+        - label: Update their Custom Field 2 appropriately to match their UTC working hours and max assignments number
         - label: Assign a Coach Mentor to the SRAM using [these instructions](https://stackoverflowteams.com/c/expensify/questions/15287/15288#15288)
         - label: Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks 
-          required: true 
+          required: true
+ - type: checkboxes
+    id: coachMentorTasks
+    attributes:
+      label: SRAM Mentor Tasks
+      description: Tasks to be completed by the SRAM's Mentor
+      options:
+        - label: Review this [SO](https://stackoverflow.com/c/expensify/questions/14477) on mentoring best practices
+        - label: Share this set of Account Managers [SOs](https://stackoverflowteams.com/c/expensify/posts/tagged/882) with SRAM and ask them to review them
+        - label: Reach out directly to your mentee in Slack (via DM) to introduce yourself
+        - label: Ask your mentee to enter their GH handle (without the `@`) in Concierge (Concierge > Settings > [GitHub Details](https://www.expensify.com/concierge/#/settings/gitHubDetails) > Save)
+        - label: Add them to the [#account-management](https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM) channel in Slack
+        - label: Confirm they have users assigned to them in Concierge
+        - label: Book an initial sync with them to introduce yourself
+        - label: Set up Google Calendar for appointment booking by [following these steps](https://stackoverflowteams.com/c/expensify/questions/15512/)
+          required: true  
