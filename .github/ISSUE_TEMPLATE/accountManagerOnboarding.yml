@@ -24,7 +24,7 @@ body:
         - Agent
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: timezoneAndShift
     attributes:
       label: SRAM Timezone and Shift
@@ -32,7 +32,7 @@ body:
       placeholder: hermione@hogwarts.com - UTC+1:00 - 9:00-18:00, harry@howarts.com - UTC+6:00 - 8:00-16:00
     validations:
       required: true
- - type: checkboxes
+  - type: checkboxes
     id: coachTasks
     attributes:
       label: Coach Tasks
@@ -43,7 +43,7 @@ body:
         - label: Assign a Coach Mentor to the SRAM using [these instructions](https://stackoverflowteams.com/c/expensify/questions/15287/15288#15288)
         - label: Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks 
           required: true
- - type: checkboxes
+  - type: checkboxes
     id: coachMentorTasks
     attributes:
       label: SRAM Mentor Tasks
