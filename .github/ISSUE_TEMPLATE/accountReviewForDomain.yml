@@ -1,0 +1,186 @@
+---
+name: AM Account Review
+description: Account Review template for AM's
+title: "Account Review for domain.com"
+labels:
+  - Monthly
+  - Task
+body:
+  - type: markdown
+    attributes:
+      value: "### Customer Info"
+  - type: input
+    id: email
+    attributes:
+      label: Billing Owner
+      description: Billing Owner(s) for this domain
+      placeholder: ex. hermione@hogwarts.com
+    validations:
+      required: true
+  - type: dropdown
+    id: accounting
+    attributes:
+      label: Type of accountant
+      description: Are they from an Accounting Firm, an in-house finance team or something else 
+      options:
+        - In-house accountant
+        - Approved! Firm
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Value
+      description: "What’s the main value they’re looking to get from Expensify (Fine if this is left blank if value is unknown)"
+      placeholder: They'd like to streamline their month end by integrating NetSuite and use ACH reimbursement.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "### Expensify Usage"
+  - type: input
+    id: commmitment
+    attributes:
+      label: User Commitment
+      description: Number of committed seats
+      placeholder: 23
+    validations:
+      required: true
+  - type: input
+    id: threeMonthAverage
+    attributes:
+      label: 3-month user average
+      description: Average number of users active during the last 3 months
+      placeholder: 19
+    validations:
+      required: true
+  - type: input
+    id: sixTwelveMonthAverage
+    attributes:
+      label: 6-12-month user average
+      description: Average number of users active in the last 6 or 12 months, whichever exists that is greater
+      placeholder: 12
+    validations:
+      required: true
+  - type: input
+    id: endDate
+    attributes:
+      label: Contract/Subscription End Date
+      description: What date does their contract end?
+      placeholder: March 1, 2025
+    validations:
+      required: true
+  - type: checkboxes
+    id: renewOrIncrease
+    attributes:
+      label: Do they have Auto Renew or Auto Increase enabled?
+      description: "Check the options they do have enabled"
+      options:
+        - label: Auto Renew
+          required: false
+        - label: Auto Increase Subscription Size
+          required: false
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Workspace/Policy Plan
+      description: Pick the plan they're being billed for
+      options:
+        - Free
+        - Collect
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: trajectory
+    attributes:
+      label: Usage Trajectory
+      description: Is the number of active users for this customer increasing, decreasing or staying mostly constant?
+      options:
+        - Increasing
+        - Decreasing
+        - Mostly Constant
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "### General Policy Configuration"
+ - type: input
+    id: scheduledSubmit
+    attributes:
+      label: Scheduled Submit
+      description: Are they using Scheduled Submit? At what frequency?
+      placeholder: Yes, mostly Monthly but some policies are disabled.
+    validations:
+      required: true
+ - type: textarea
+    id: approvalWorkflow
+    attributes:
+      label: Approval Workflow
+      description: Submit & Close / Submit & Approve / Advanced Approval / DEW. Do they have auto-approvals set up?
+      placeholder: Submit & Approve with no auto-approval.
+    validations:
+      required: true
+  - type: checkboxes
+    id: integrations
+    attributes:
+      label: Integrations Connected
+      description: "Any direct integrations connected? Select any/all and explain any detail below."
+      options:
+        - label: QuickBooks Online
+          required: false
+        - label: QuickBooks Desktop
+          required: false
+        - label: Xero
+          required: false
+        - label: NetSuite
+          required: false
+        - label: Sage Intacct
+          required: false
+        - label: FinancialForce (FFA or PSA)
+          required: false
+        - label: CSV export (standard Sage/Dynamics/MYOB etc or Export Formats created or IS Template)
+          required: false
+        - label: HR Integration (Gusto, Zenefits, Workday etc)
+          required: false
+  - type: checkboxes
+    id: coding
+    attributes:
+      label: Coding
+      description: "Select which coding features they use:"
+      options:
+        - label: Category Rules
+          required: false
+        - label: Single Level Tags
+          required: false
+        - label: Multi-Level Tags
+          required: false
+        - label: Tag or Category Approvers
+          required: false
+  - type: checkboxes
+    id: reimbursement
+    attributes:
+      label: In-product Reimbursement
+      description: "Which currencies do they reimburse from via Expensify?"
+      options:
+        - label: USD
+          required: false
+        - label: GBP
+          required: false
+        - label: CAD
+          required: false
+        - label: EUR
+          required: false
+        - label: AUD
+          required: false
+        - label: SGD
+          required: false
+ - type: textarea
+    id: integrationsDetail
+    attributes:
+      label: Integrations, coding and reimbursement detail
+      description: Add any detail about the integrations they use that is pertinent
+      placeholder: They connect to NetSuite but don't have Auto-Sync enabled.
+    validations:
+      required: false
