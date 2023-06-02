@@ -47,7 +47,7 @@ body:
     attributes:
       label: User Commitment
       description: Number of committed seats
-      placeholder: 23
+      placeholder: "23"
     validations:
       required: true
   - type: input
@@ -55,7 +55,7 @@ body:
     attributes:
       label: 3-month user average
       description: Average number of users active during the last 3 months
-      placeholder: 19
+      placeholder: "19"
     validations:
       required: true
   - type: input
@@ -64,7 +64,7 @@ body:
       label: 6-12-month user average
       description: Average number of users active in the last 6 or 12 months,
         whichever exists that is greater
-      placeholder: 12
+      placeholder: "12"
     validations:
       required: true
   - type: input
