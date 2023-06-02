@@ -1,7 +1,7 @@
 ---
 name: AM Account Review
 description: Account Review template for AMs
-title: "Account Review for domain.com"
+title: Account Review for domain.com
 labels:
   - Monthly
   - Task
@@ -21,7 +21,8 @@ body:
     id: accounting
     attributes:
       label: Type of accountant
-      description: Are they from an Accounting Firm, an in-house finance team or something else 
+      description: Are they from an Accounting Firm, an in-house finance team or
+        something else
       options:
         - In-house accountant
         - Approved! Firm
@@ -32,8 +33,10 @@ body:
     id: value
     attributes:
       label: Value
-      description: "What’s the main value they’re looking to get from Expensify (Fine if this is left blank if value is unknown)"
-      placeholder: They'd like to streamline their month end by integrating NetSuite and use ACH reimbursement.
+      description: What’s the main value they’re looking to get from Expensify (Fine
+        if this is left blank if value is unknown)
+      placeholder: They'd like to streamline their month end by integrating NetSuite
+        and use ACH reimbursement.
     validations:
       required: false
   - type: markdown
@@ -59,7 +62,8 @@ body:
     id: sixTwelveMonthAverage
     attributes:
       label: 6-12-month user average
-      description: Average number of users active in the last 6 or 12 months, whichever exists that is greater
+      description: Average number of users active in the last 6 or 12 months,
+        whichever exists that is greater
       placeholder: 12
     validations:
       required: true
@@ -75,7 +79,7 @@ body:
     id: renewOrIncrease
     attributes:
       label: Do they have Auto Renew or Auto Increase enabled?
-      description: "Check the options they do have enabled"
+      description: Check the options they do have enabled
       options:
         - label: Auto Renew
           required: false
@@ -96,7 +100,8 @@ body:
     id: trajectory
     attributes:
       label: Usage Trajectory
-      description: Is the number of active users for this customer increasing, decreasing or staying mostly constant?
+      description: Is the number of active users for this customer increasing,
+        decreasing or staying mostly constant?
       options:
         - Increasing
         - Decreasing
@@ -106,7 +111,7 @@ body:
   - type: markdown
     attributes:
       value: "### General Policy Configuration"
- - type: input
+  - type: input
     id: scheduledSubmit
     attributes:
       label: Scheduled Submit
@@ -114,11 +119,12 @@ body:
       placeholder: Yes, mostly Monthly but some policies are disabled.
     validations:
       required: true
- - type: textarea
+  - type: textarea
     id: approvalWorkflow
     attributes:
       label: Approval Workflow
-      description: Submit & Close / Submit & Approve / Advanced Approval / DEW. Do they have auto-approvals set up?
+      description: Submit & Close / Submit & Approve / Advanced Approval / DEW. Do
+        they have auto-approvals set up?
       placeholder: Submit & Approve with no auto-approval.
     validations:
       required: true
@@ -126,7 +132,8 @@ body:
     id: integrations
     attributes:
       label: Integrations Connected
-      description: "Any direct integrations connected? Select any/all and explain any detail below."
+      description: Any direct integrations connected? Select any/all and explain any
+        detail below.
       options:
         - label: QuickBooks Online
           required: false
@@ -140,7 +147,8 @@ body:
           required: false
         - label: FinancialForce (FFA or PSA)
           required: false
-        - label: CSV export (standard Sage/Dynamics/MYOB etc or Export Formats created or IS Template)
+        - label: CSV export (standard Sage/Dynamics/MYOB etc or Export Formats created or
+            IS Template)
           required: false
         - label: HR Integration (Gusto, Zenefits, Workday etc)
           required: false
@@ -162,7 +170,7 @@ body:
     id: reimbursement
     attributes:
       label: In-product Reimbursement
-      description: "Which currencies do they reimburse from via Expensify?"
+      description: Which currencies do they reimburse from via Expensify?
       options:
         - label: USD
           required: false
@@ -176,7 +184,7 @@ body:
           required: false
         - label: SGD
           required: false
- - type: textarea
+  - type: textarea
     id: integrationsDetail
     attributes:
       label: Integrations, coding and reimbursement detail
