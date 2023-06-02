@@ -8,7 +8,7 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: "### Customer Info"
+      value: "### Customer Info:"
   - type: input
     id: email
     attributes:
@@ -41,7 +41,7 @@ body:
       required: false
   - type: markdown
     attributes:
-      value: "### Expensify Usage"
+      value: "### Expensify Usage:"
   - type: input
     id: commmitment
     attributes:
@@ -110,7 +110,7 @@ body:
       required: true
   - type: markdown
     attributes:
-      value: "### General Policy Configuration"
+      value: "### General Policy Configuration:"
   - type: input
     id: scheduledSubmit
     attributes:
@@ -191,4 +191,91 @@ body:
       description: Add any detail about the integrations they use that is pertinent
       placeholder: They connect to NetSuite but don't have Auto-Sync enabled.
     validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "### Company Cards:"
+  - type: checkboxes
+    id: cardsConnected
+    attributes:
+      label: Cards Connected
+      description: What type of cards do they have connected? (Leave blank for none).
+      options:
+        - label: Expensify Card
+          required: false
+        - label: Corporate Card Feed (VCF/CDF/GL1025/Custom Citi etc)
+          required: false
+        - label: Direct Connection Cards (Amex/Chase/BofA etc)
+          required: false
+        - label: Company Card CSV upload
+          required: false
+        - label: "Individual Cards per employee Account > Credit Card Import"
+          required: false
+   - type: markdown
+    attributes:
+      value: "Company Card Spend:"
+   - type: input
+    id: cardSpend1
+    attributes:
+      label: Month 1
+      description: What was their Company Card spend 3 months ago?
+      placeholder: "$1234"
+    validations:
       required: false
+   - type: input
+    id: cardSpend2
+    attributes:
+      label: Month 2
+      description: What was their Company Card spend 2 months ago?
+      placeholder: "$1234"
+    validations:
+      required: false
+   - type: input
+    id: cardSpend3
+    attributes:
+      label: Month 3
+      description: What was their Company Card for the most recent month?
+      placeholder: "$1234"
+    validations:
+      required: false
+   - type: markdown
+    attributes:
+      value: "### Sentiment:"
+  - type: dropdown
+    id: engagement
+    attributes:
+      label: Engagement Level
+      description: Are you talking to this customer often, sometimes, or never?
+      options:
+        - Often
+        - Sometimes
+        - Never
+    validations:
+      required: true
+  - type: textarea
+    id: chatHistory
+    attributes:
+      label: Concierge Chat History
+      description: Review past chats from the policy owner/ admins to see if there have been any red flags / concerns. Do they seem generally satisfied by then support they've received by Concierge?
+      placeholder: They received some bad support in the past but we're turning it around recently.
+    validations:
+      required: true
+  - type: textarea
+    id: ghHistory
+    attributes:
+      label: GitHub History
+      description: Search for the billing owner email and company domain in GH to check if they experienced any critical issues in the past 6 months? 
+      placeholder: https://github.com/Expensify/Expensify/issues/282134 - DEW Update
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "### Potential Opportunities:"      
+  - type: textarea
+    id: opportunities
+    attributes:
+      label: What are the main opportunities you see for improvement?
+      description: Review their Billing, Policy Configuration, Company Cards and Domain setup, and their sentiment and suggest improvements to send over.
+      placeholder: "- Billing: Is the customer on pay-per-use when they could be on annual (0 committed users)? Is usage greater than commitment so they are overpaying for Expensify? Do they have multiple policy owners, meaning they could be double paying for users across policies? - Policy Configurations: Are there any obvious improvements they can make to their policy setup (ie. connect to a direct integration, advanced approval with no "approves to" configured,  enable scheduled submit, reimburse via ACH)? - Company Cards: Is there any opportunity to adopt the Expensify Card if they haven't already (i.e if they have a VBA set up and/or USD policy(ies)? If they have adopted, can they expand usage (I.e are there employees without cards incurring out of pocket expenses)? - Sentiment: Anything you can spot that can improve customer happiness? What is their overall NPS score?"
+    validations:
+      required: true
