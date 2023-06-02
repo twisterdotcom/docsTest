@@ -211,10 +211,10 @@ body:
           required: false
         - label: "Individual Cards per employee Account > Credit Card Import"
           required: false
-   - type: markdown
+  - type: markdown
     attributes:
       value: "Company Card Spend:"
-   - type: input
+  - type: input
     id: cardSpend1
     attributes:
       label: Month 1
@@ -222,7 +222,7 @@ body:
       placeholder: "$1234"
     validations:
       required: false
-   - type: input
+  - type: input
     id: cardSpend2
     attributes:
       label: Month 2
@@ -230,7 +230,7 @@ body:
       placeholder: "$1234"
     validations:
       required: false
-   - type: input
+  - type: input
     id: cardSpend3
     attributes:
       label: Month 3
@@ -238,7 +238,7 @@ body:
       placeholder: "$1234"
     validations:
       required: false
-   - type: markdown
+  - type: markdown
     attributes:
       value: "### Sentiment:"
   - type: dropdown
@@ -276,6 +276,6 @@ body:
     attributes:
       label: What are the main opportunities you see for improvement?
       description: Review their Billing, Policy Configuration, Company Cards and Domain setup, and their sentiment and suggest improvements to send over.
-      placeholder: "- Billing: Is the customer on pay-per-use when they could be on annual (0 committed users)? Is usage greater than commitment so they are overpaying for Expensify? Do they have multiple policy owners, meaning they could be double paying for users across policies? - Policy Configurations: Are there any obvious improvements they can make to their policy setup (ie. connect to a direct integration, advanced approval with no "approves to" configured,  enable scheduled submit, reimburse via ACH)? - Company Cards: Is there any opportunity to adopt the Expensify Card if they haven't already (i.e if they have a VBA set up and/or USD policy(ies)? If they have adopted, can they expand usage (I.e are there employees without cards incurring out of pocket expenses)? - Sentiment: Anything you can spot that can improve customer happiness? What is their overall NPS score?"
+      placeholder: "Billing Is the customer on pay-per-use when they could be on annual (0 committed users)? Is usage greater than commitment so they are overpaying for Expensify? Do they have multiple policy owners, meaning they could be double paying for users across policies? Policy Configurations Are there any obvious improvements they can make to their policy setup (ie. connect to a direct integration, advanced approval with no "approves to" configured,  enable scheduled submit, reimburse via ACH)? Company Cards Is there any opportunity to adopt the Expensify Card if they haven't already (if they have a VBA set up and/or USD policy(ies)? If they have adopted, can they expand usage (are there employees without cards incurring out-of-pocket expenses)? Sentiment Anything you can spot that can improve customer happiness? What is their overall NPS score?"
     validations:
       required: true
