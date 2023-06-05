@@ -1,5 +1,5 @@
 ---
-name: Add or Amend TestRail case
+name: AddorAmend TestRail case
 description: Add or amend a test case in Test Rail
 title: "Update Test Rail case from App #"
 labels:
