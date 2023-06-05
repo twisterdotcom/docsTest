@@ -1,0 +1,61 @@
+---
+name: Add or Amend TestRail case
+description: Add or amend a test case in Test Rail
+title: "Update Test Rail case from App #"
+labels:
+  - Weekly
+assignees:
+  - applausebot
+  - isagoico
+body:
+  - type: input
+    id: appIssue
+    attributes:
+      label: App Issue linked to update
+      description: Paste the Expensify/App issue to link the two issues if it exists.
+      placeholder: https://github.com/Expensify/App/issues/15877
+    validations:
+      required: false
+  - type: dropdown
+    id: newOrExisting
+    attributes:
+      label: New or Existing test case addition
+      description: Is this a new test case, or an addition to an existing test case?
+      options:
+        - New test case
+        - Addition to existing case
+    validations:
+      required: true
+  - type: textarea
+    id: detailsOfTestCase
+    attributes:
+      label: Outline the details
+      description: List here any circumstances of extra information we might need to
+        handle this request
+      placeholder: Add a new Currency test case to Workspace and Add Bank account > Workspace Settings > General settings for Currency / 1. Connect a bank account to the workspace (if you don't have one already) (As in Add Bank Account tests). / 2. Go to Workspace Settings > General Settings > Currency / 3. Verify that the default currency can't be edited and help text states why - 'The default currency can't be changed because this workspace is linked
+          to a USD bank account.'
+    validations:
+      required: true
+  - type: input
+    id: testRailLink
+    attributes:
+      label: Link to folder in TestRail
+      description: Paste the link to the folder you think this should live in within
+        TestRail.
+      placeholder: https://expensify.testrail.io/index.php?/suites/view/518&group_by=cases:section_id&group_order=asc&display_deleted_cases=0&group_id=181079
+    validations:
+      required: true
+  - type: textarea
+    id: otherNotes
+    attributes:
+      label: Any other notes for Applause
+      description: Add any other notes for Applause that will be helpful adding the
+        test case
+      placeholder: I decided on General Settings, I thought because the setting was
+        here it made sense, but if you think it's better adding to the Add Bank
+        Account tests, that's also fine by me.
+    validations:
+      required: true
+  - type: markdown
+      attributes:
+      value: "cc @Expensify/applauseleads"
