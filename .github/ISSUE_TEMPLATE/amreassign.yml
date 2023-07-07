@@ -3,9 +3,9 @@ name: Managed Domain Reassignment
 description: Have the Concierge Team reassign a managed customer
 title: "[Customer Reassignment]: domain.com"
 labels:
-  - concierge
-  - daily
-  - task
+  - Concierge
+  - Daily
+  - Task
 body:
   - type: markdown
     attributes:
@@ -13,13 +13,47 @@ body:
   - type: markdown
     attributes:
       value: "*Note*: All requested information must be completed before submitting
-        the GH issue for review."
+        the GH issue for review. Review [this
+        StackOverflow](https://stackoverflowteams.com/c/expensify/questions/140\
+        54) for instructions."
   - type: input
     id: domain
     attributes:
       label: Domain of assigned customer
       description: The domain of the assigned customer
       placeholder: ex. hogwarts.com
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Email address of primary admin
+      description: The email address of the main point of contact
+      placeholder: accounting@hogwarts.com
+    validations:
+      required: true
+  - type: input
+    id: timezone
+    attributes:
+      label: Working timezone of primary admin
+      description: We need this so we can better assign the correct Account Manager
+      placeholder: PST (Los Angeles, US)
+    validations:
+      required: true
+  - type: input
+    id: amEmail
+    attributes:
+      label: Your team.expensify.com email
+      description: Sometimes it's not clear from the GitHub username!
+      placeholder: account.manager@team.expensify.com
+    validations:
+      required: true
+  - type: input
+    id: timezone
+    attributes:
+      label: Your working timezone
+      description: We need this so we can better assign the correct Account Manager
+      placeholder: PST (Los Angeles, US)
     validations:
       required: true
   - type: input
@@ -34,9 +68,8 @@ body:
     id: reasonForReassignment
     attributes:
       label: Reason for Reassignment
-      description: Please choose a reason from the below dropdown.
+      description: Why does this domain need to be reassigned from you?
       options:
-        - 
         - Primary contact(s) timezone incompatible
         - Other
     validations:
@@ -45,7 +78,14 @@ body:
     id: detailsForReassignment
     attributes:
       label: Outline the details
-      description: List here any circumstances of extra information we might need to handle this request
-      placeholder: Most users from hogwarts.com can't make calls during my business hours. I have a good relationship with Minerva though as we have bonded over our love of cats.
+      description: List here any circumstances of extra information we might need to
+        handle this request
+      placeholder: Most users from hogwarts.com can't make calls during my business
+        hours. I have a good relationship with Minerva though as we have bonded
+        over our love of cats.
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: "Assignee: Follow the process here to complete the assignment:
+        https://stackoverflowteams.com/c/expensify/questions/16492"
