@@ -33,7 +33,7 @@ body:
     validations:
       required: true
   - type: input
-    id: timezone
+    id: timezone1
     attributes:
       label: Working timezone of primary admin
       description: We need this so we can better assign the correct Account Manager
@@ -49,7 +49,7 @@ body:
     validations:
       required: true
   - type: input
-    id: timezone
+    id: timezone2
     attributes:
       label: Your working timezone
       description: We need this so we can better assign the correct Account Manager
