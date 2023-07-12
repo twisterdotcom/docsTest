@@ -91,4 +91,4 @@ body:
         https://stackoverflowteams.com/c/expensify/questions/16492"
   - type: markdown
     attributes:
-      value: ""
+      value: "There is a bug where .yml templates don't show the last bit of markdown. If this shows up, edit this away in the template here."
