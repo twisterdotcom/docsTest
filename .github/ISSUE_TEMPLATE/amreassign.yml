@@ -89,3 +89,6 @@ body:
     attributes:
       value: "Assignee: Follow the process here to complete the assignment:
         https://stackoverflowteams.com/c/expensify/questions/16492"
+  - type: markdown
+    attributes:
+      value: ""
