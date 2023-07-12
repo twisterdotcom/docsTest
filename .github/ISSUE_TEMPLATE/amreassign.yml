@@ -9,6 +9,9 @@ labels:
 body:
   - type: markdown
     attributes:
+      value: "Concierge assignee: Follow the process here to complete the assignment: https://stackoverflowteams.com/c/expensify/questions/16492"
+  - type: markdown
+    attributes:
       value: "## Customer Details"
   - type: markdown
     attributes:
@@ -85,10 +88,3 @@ body:
         over our love of cats.
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: "Assignee: Follow the process here to complete the assignment:
-        https://stackoverflowteams.com/c/expensify/questions/16492"
-  - type: markdown
-    attributes:
-      value: "There is a bug where .yml templates don't show the last bit of markdown. If this shows up, edit this away in the template here."
