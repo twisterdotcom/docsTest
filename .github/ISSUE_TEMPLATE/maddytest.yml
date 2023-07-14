@@ -4,6 +4,8 @@ title: "Maddy's Amazing Template"
 labels:
   - Daily
   - Task
+assignees:
+  - me  
 body:
   - type: checkboxes
     id: conciergeTasks
