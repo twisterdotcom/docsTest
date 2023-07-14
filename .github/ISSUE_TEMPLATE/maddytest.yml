@@ -1,47 +1,105 @@
-name: something something
-description: This is the thing Maddy wanted
-title: "Maddy's Amazing Template"
+name: Business Bank Account Review Template
+description: VBBA Compliance Review Checklist
+title: "Business Bank Account Review for [insert requestor's email]"
 labels:
   - Daily
   - Task
-assignees:
-  - me  
 body:
-  - type: checkboxes
-    id: conciergeTasks
+  - type: markdown
     attributes:
-      label: 'Coach Tasks:'
-      description: 'These must be done by the Coach that gets this GH assign first'
+      value: "## Customer Details"
+  - type: markdown
+    attributes:
+      value: "*Note*: All requested information must be completed before submitting
+        the GH issue for review."
+  - type: input
+    id: email
+    attributes:
+      label: Affected Primary Email Address
+      description: The affected user's primary email address
+      placeholder: ex. hermione@hogwarts.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: Concierge Chat
+      description: The URL of the chat you're asking for help on
+      placeholder: https://www.expensify.com/concierge/#/chat/12345678
+    validations:
+      required: true
+  - type: checkboxes
+    id: failedChecks
+    attributes:
+      label: 'What are the failed checks on the VBA?'
+      description: 'Check all that apply'
       options:
-        - label: 'Request that the SR be added as a member to "#sr-account-managers" Slack workspace, by clicking on "Expensify" (top left in Slack) > "Invite People To Expensify."'
+        - label: 'RealSearch'
+          required: false
+        - label: 'Company Address'
+          required: false
+        - label: 'Controlling Officer ID'
+          required: false
+        - label: 'Beneficial Officer ID'
+          required: false
+        - label: 'Tax/Employer Identification Number (TINcheck)'
+          required: false
+        - label: 'Account Ownership (GIACT)'
+          required: false
+  - type: markdown
+    attributes:
+      value: "---"         
+  - type: checkboxes
+    id: checks1
+    attributes:
+      label: 'Step 1 - Preliminary Checks:'
+      description: 'Verifying details entered match our requirements.'
+      options:
+        - label: 'Confirm that both the company and requestor addresses are physical addresses (not PO boxes)'
           required: true
-        - label: 'Update the Custom Field 2 in the relevant firstresponders@expensify.com owned "secondResponder" policy to reflect their working hours and maximum assignments (eg: "UTC+1:00;300")'
+        - label: 'Confirm the Requestor information matches the Expensify account holder'
           required: true
-        - label: 'Assign a Coach Mentor to the SRAM using these instructions: https://stackoverflowteams.com/c/expensify/questions/15287'
-          required: true
-        - label: 'Once Coach Tasks are complete, assign the Coach Mentor to complete the below mentor tasks'
+        - label: 'Make sure that the ID in Onfido is a US-issued ID'
           required: true
   - type: checkboxes
-    id: mentorTasks
+    id: checks2
     attributes:
-      label: 'Coach Mentor Tasks:'
-      description: 'These must be done by the Coach that will have the Team Lead/Agent as a Mentee'
+      label: 'Step 2 - Review / Pass Compliance Checks'
+      description: 'Verifying details entered match our requirements.'
       options:
-        - label: 'Review this SO on mentoring best practices: https://stackoverflow.com/c/expensify/questions/14477'
-          required: true
-        - label: 'Share this set of Account Managers SOs with SRAM and ask them to review them: https://stackoverflowteams.com/c/expensify/posts/tagged/882'
-          required: true
-        - label: 'Reach out directly to your mentee in Slack (via DM) to introduce yourself'
-          required: true
-        - label: 'Ask your mentee to enter their GH handle (without the @) in Concierge (Concierge > Settings > GitHub Details: https://www.expensify.com/concierge/#/settings/gitHubDetails > Save)'
-          required: true
-        - label: 'Add them to the #account-management channel in Slack: https://app.slack.com/client/T03SC9DTT/C03GV4V2KCM'
-          required: true
-        - label:  'Confirm they have users assigned to them in Concierge'
-          required: true
-        - label: 'Book an initial sync with them to introduce yourself'
-          required: true
-        - label: 'Set up Google Calendar for appointment booking by following these steps: https://stackoverflowteams.com/c/expensify/questions/15512/'
-          required: true
-        - label: 'Edit the ([whitelist](https://github.com/Expensify/Salt/blob/main/www/files/www-whitelist.php) to add the new agent as your mentee'
-          required: true
+        - label: 'RealSearch passed automatically or the customer provided an acceptable document'
+          required: false
+        - label: 'Company Address passed automatically or the customer provided an acceptable document'
+          required: false
+        - label: 'Controlling Officer ID passed automatically or the customer provided an acceptable document'
+          required: false
+        - label: 'Beneficial Owner ID passed automatically or the customer provided an acceptable document'
+          required: false
+  - type: checkboxes
+    id: checks3
+    attributes:
+      label: 'Step 3 - Did you update any customer information in the VBA Tool?'
+      description: ' Check all that apply'
+      options:
+        - label: 'Company Address'
+          required: false
+        - label: 'Requestor info'
+          required: false
+        - label: 'Beneficial Owner info'
+          required: false
+        - label: 'N/A - I did not update any information'
+          required: false
+  - type: checkboxes
+    id: checks4
+    attributes:
+      label: 'Step 4 - Are there any Risk Checks that failed on the VBA that the Concierge Team member needs to review?'
+      description: ' Check all that apply'
+      options:
+        - label: 'TINcheck'
+          required: false
+        - label: 'GIACT'
+          required: false
+        - label: 'Onfido'
+          required: false
+        - label: 'No, only Compliance Checks failed'
+          required: false
