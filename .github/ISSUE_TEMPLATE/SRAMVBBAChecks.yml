@@ -11,7 +11,7 @@ body:
   - type: markdown
     attributes:
       value: "*Note*: All requested information must be completed before submitting
-        the GH issue for review."
+        the GH issue for review. Once complete, add the `Concierge` label."
   - type: input
     id: email
     attributes:
