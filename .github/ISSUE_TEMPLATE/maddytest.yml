@@ -65,7 +65,7 @@ body:
     id: checks2
     attributes:
       label: 'Step 2 - Review / Pass Compliance Checks'
-      description: 'Verifying details entered match our requirements.'
+      description: 'https://zingtree.com/tree/view.php?this_project_id=156920470'
       options:
         - label: 'RealSearch passed automatically or the customer provided an acceptable document'
           required: false
