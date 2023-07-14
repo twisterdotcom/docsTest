@@ -1,37 +1,10 @@
-name: SRAM Account Manager Onboarding222
-description: This is a checklist for Onboarding a SecondResponder (SR) as an Account Manager (AM)
-title: "Account Manager Onboarding Checklist"
+name: something something
+description: This is the thing Maddy wanted
+title: "Maddy's Amazing Template"
 labels:
-  - concierge
-  - weekly
-  - task
+  - Daily
+  - Task
 body:
-  - type: textarea
-    id: email
-    attributes:
-      label: SRAM(s) Email(s)
-      description: The SRAM(s) email address(es). If there are more than one, please bulletpoint each email address.
-      placeholder: '- hermione@hogwarts.com, - harry@hogwarts.com'
-    validations:
-      required: true
-  - type: dropdown
-    id: teamLeadOrAgent
-    attributes:
-      label: Are they a Team Lead or Agent?
-      description: Select whether the above SRAM's are Team Leads or Agents (if both, create multiple issues)
-      options:
-        - Agent
-        - Team Lead
-    validations:
-      required: true
-  - type: textarea
-    id: timezone
-    attributes:
-      label: 'SRAM Timezone and shift:'
-      description: Details the timezone and shift pattern the SRAM(s) will work
-      placeholder: 'hermione@hogwarts.com - UTC+1:00 - 9:00-18:00, harry@howarts.com - UTC+6:00 - 8:00-16:00'
-    validations:
-      required: true
   - type: checkboxes
     id: conciergeTasks
     attributes:
