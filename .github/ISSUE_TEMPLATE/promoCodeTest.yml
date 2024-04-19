@@ -1,0 +1,65 @@
+---
+name: Apply Promo Code
+description: Ask a Concierge team member to apply a discount/promo code to a customer account
+title: "Apply Promo Code - 30%/50% - customer@domain.com"
+labels:
+  - Concierge
+  - Daily
+  - Task
+body:
+  - type: checkboxes
+    id: titleUpdated
+    attributes:
+      label: "Have you updated the issue title with the customer email and desired code value?"
+      options:
+        - label: "Yes"
+          required: true
+  - type: markdown
+    attributes:
+      value: "## Customer Details"
+  - type: input
+    id: email
+    attributes:
+      label: "Billing Owner's Email Address"
+      description: The billing owner's primary email address
+      placeholder: ex. billingowner@company.com
+    validations:
+      required: true
+  - type: input
+    id: chatLink
+    attributes:
+      label: "Concierge Chat"
+      description: The URL of the chat you're asking for help on (if applicable)
+      placeholder: https://www.expensify.com/concierge/#/chat/12345678
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "## Discount Details"
+  - type: dropdown
+    id: discountValue
+    attributes:
+      label: "Discount Type"
+      description: Which discount is the customer eligible for?
+      options:
+        - 50% discount - Retention (existing Annual)
+        - 50% discount - Retention (just switched to Annual)
+        - 50% discount - Expensify Card (international)
+        - 30% discount - Expensify Card (international)
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Paste a screenshot of the customer's eligibility for a discount"
+      description: Please provide a screenshot of relevant messaging showing that the customer is eligible for the discount code.
+    validations:
+      required: true
+  - type: input
+    id: stackOverflow
+    attributes:
+      label: "StackOverflow"
+      description: Post the relevant Stack Overflow link you used to create this issue.
+      placeholder: https://stackoverflowteams.com/c/expensify/questions/10574
+    validations:
+      required: true
