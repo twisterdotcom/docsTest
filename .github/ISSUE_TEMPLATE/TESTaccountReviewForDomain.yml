@@ -1,0 +1,237 @@
+---
+name: AM Account Review
+description: Account Review template for AMs
+title: Account Review for domain.com
+labels:
+  - Monthly
+  - Task
+body:
+  - type: markdown
+    attributes:
+      value: "# Call Purpose"
+  - type: input
+    id: email
+    attributes:
+      label: Email of domain or workspace admin who requested the call:
+      description: Who booked the call? Enter their email address here. 
+      placeholder: "ex. hermione@hogwarts.com"
+    validations:
+      required: true
+  - type: checkboxes
+    id: purpose
+    attributes:
+      label: Which of the following retention-oriented actions did call support:
+      description: Check all items that applied to this call.
+      options:
+        - label: Promoted general customer retention
+          required: false
+        - label: Promoted customer growth
+          required: false
+        - label: Promoted feature adoption
+          required: false
+        - label: Obtained feedback that is useful to Expensify (i.e. churn call feedback, or feedback on a new feature)
+          required: false
+        - label: Established a relationship with a customer that hasn’t been engaged within the within the past 6 months
+          required: false
+        - label: Established an initial relationship with a newly assigned customer
+          required: false
+  - type: textarea
+    id: purposecontext
+    attributes:
+      label: In what way did this call support the selected retention-oriented actions?
+      description: Add a short description of how this call supports the selected retention-oriented actions.
+      placeholder: "During the call the customer switched from PPU to an Annual Subscription, and also enabled direct reimbursement."
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "# Billing and Subscription Information"
+  - type: checkboxes
+    id: subscription
+    attributes:
+      label: Subcription information:
+      description: Check all items that apply to this customer.
+      options:
+        - label: Annual Subscription 
+          required: false
+        - label: Auto renew enabled 
+          required: false
+        - label: Auto Increased enabled 
+          required: false
+  - type: input
+    id: numactive
+    attributes:
+      label: Number of active users on most recent bill:
+      description:  
+      placeholder: "19"
+    validations:
+      required: true
+  - type: input
+    id: numcommitted
+    attributes:
+      label:  Number of users their subscription is set for:
+      description: Leave this blank if they are on PPU 
+      placeholder: "12"
+    validations:
+      required: false
+  - type: input
+    id: endDate
+    attributes:
+      label: Contract/Subscription End Date:
+      description: What date does their contract end? Leave this blank if they are on PPU.
+      placeholder: "March 1, 2025"
+    validations:
+      required: false
+  - type: input
+    id: trajectory
+    attributes:
+      label: Usage trajectory:
+      description: Look at their number of active users over the past 6 months. Is it increasing, constant, or declining?
+      placeholder: "increasing"
+    validations:
+      required: true
+  - type: textarea
+    id: subnotes
+    attributes:
+      label: Additional notes on subscription: 
+      description: If there are any additional notes you want to share about this customer's billing setup, add them here.
+      placeholder: "They recently enabled auto-renew"
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "# Workspace information"
+  - type: checkboxes
+    id: configuration
+    attributes:
+      label: Workspace Configuration: 
+      description: Check all items that apply to this customer. 
+      options:
+        - label: Scheduled Submit enabled 
+          required: false
+        - label: Advanced approval workflow enabled 
+          required: false
+        - label: Workflow enforcement enabled 
+          required: false
+        - label: Direct Reimbursement enabled (US only)
+          required: false
+        - label: Enabled Global Reimbursement 
+          required: false
+- type: textarea
+  id: integrations
+  attributes:
+    label: "What integrations are they using?"
+    description: "List any integrations the customer is using here. Direct integrations will be listed under the Connections tab on the workspace, while indirect integrations may show as an export template."
+    placeholder: "They have an IS template for Microsoft Dynamics, and are using the Bill.com direct integration."
+  validations:
+    required: true
+  - type: markdown
+    attributes:
+      value: "# Credit Cards "
+  - type: checkboxes
+    id: creditcard
+    attributes:
+      label: Which credit card connections is the customer using?
+      description: Check all items that apply to this customer. 
+      options:
+        - label: Using Expensify Card 
+          required: false
+        - label: Using Corporate Card Feed (VCF/CDF/GL1025/Custom Citi etc)
+          required: false
+        - label: Using Direct Connection Cards (Amex/Chase/BofA etc)
+          required: false
+        - label: Using Company Card CSV upload
+          required: false
+        - label: Using individual Cards per employee Account > Credit Card Import
+          required: false
+  - type: textarea
+    id: cardnotes
+    attributes:
+      label: Additional notes on credit cards:
+      description: "If there are any additional notes you want to share about this customer's credit card setup, add them here."
+      placeholder: "They recently enabled the Expensify Card"
+    validations:
+      required: false   
+  - type: markdown
+    attributes:
+      value: "# Engagement"
+  - type: checkboxes
+    id: engagement
+    attributes:
+      label: How often does this customer engage?
+      description: Check all items that apply to this customer.
+      options:
+        - label: Several times a week
+          required: false
+        - label: A few times each month
+          required: false
+        - label: Once every few months
+          required: false
+        - label: Almost never
+          required: false
+  - type: textarea
+    id: history
+    attributes:
+      label: Concierge and GH history:
+      description: Review the past 6 months of chats and GH history from the policy owner/admins to see if there have been any issues or problems reported and gauge sentiment. Link each item below with a short description and status.
+      placeholder: 
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "# Potential Opportunities"
+  - type: textarea
+    id: opportunities
+    attributes:
+      label: What are the main opportunities you see for improvement?
+      description: Review the customers billing, workspace configuration, company cards and domain setup and their sentiment, and suggest improvements which you plan to discuss on the call.
+      placeholder: 
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "# Followup Steps"
+  - type: textarea
+    id: followup
+    attributes:
+      label: Add a description of the followup steps you will take after this call:
+      description: Explain each followup step you intend to take, and what you plan to include in the followup message. 
+      placeholder: 
+    validations:
+      required: true   
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirm you have completed all followup steps for this Account Review:
+      description: Check off each item as it is completed. All items must be completed in order for the call to count for incentives.
+      options: 
+        - label: The Account Review GH was created and the template fully completed before the call took place, with at least one item listed the Potential Opportunities section 
+          required: true
+        - label: Full and complete call notes with proper formatting (traffic lights, followup steps, etc.) were posted to #account-management within 24 hours of the call taking place. See here for call note requirements.
+          required: true
+        - label: All items in the Potential Opportunities section were addressed during the call OR thoroughly discussed in the followup message 
+          required: true
+        - label: All outstanding customer questions have been answered, or posed in Slack, GitHub, or StackOverflow for assistance. 
+          required: true
+  - type: checkboxes
+    id: screenshots
+    attributes:
+      label: Confirm you have added all required screenshots/links as a comment to this issue:
+      description: Check off each item as it is completed. All items must be completed in order for the call to count for incentives.
+      options: 
+        - label: Screenshot of the call calendar invite showing call date, time and attendees 
+          required: true
+        - label: Screenshot or pasted contents of the call notes that were posted to Slack 
+          required: true
+        - label:  Screenshot of the call followup message showing recipients, as well as date and time sent 
+          required: true
+        - label: If there are any outstanding customer questions, a link to the Slack post, GH issue or StackOverflow was added 
+          required: true
+  - type: textarea
+    id: followupnotes
+    attributes:
+      label: Additional notes on followup steps:
+      description: If there are any additional notes you want to share about the call followup, add them here.
+      placeholder: 
+    validations:
+      required: false
